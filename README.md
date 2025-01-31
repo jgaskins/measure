@@ -1,6 +1,10 @@
 # Measure
 
-This shard lets you 
+This shard lets you measure, compare, and convert values in different units of measure.
+
+For example, you can do things like:
+- Compare a weight in ounces to one in grams
+- Convert a length in miles to one in kilometers
 
 ## Installation
 

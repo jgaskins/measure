@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.10.1">
+<meta name="crystal_docs.project_version" content="dev">
+<meta name="crystal_docs.project_name" content="measure">
+
+
+
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../js/doc.js"></script>
+
+  <meta name="repository-name" content="measure">
+  <title>Measure::Weight::Unit - measure dev</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../../index.html">
+          measure
+        </a>
+      </h1>
+
+      <span class="project-version">
+        dev
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="measure/Measure" data-name="measure">
+      <a href="../../Measure.html">Measure</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="measure/Measure/Length" data-name="measure::length">
+      <a href="../../Measure/Length.html">Length</a>
+      
+        <ul>
+  
+  <li class=" " data-id="measure/Measure/Length/Unit" data-name="measure::length::unit">
+      <a href="../../Measure/Length/Unit.html">Unit</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent open current" data-id="measure/Measure/Weight" data-name="measure::weight">
+      <a href="../../Measure/Weight.html">Weight</a>
+      
+        <ul>
+  
+  <li class=" current" data-id="measure/Measure/Weight/Unit" data-name="measure::weight::unit">
+      <a href="../../Measure/Weight/Unit.html">Unit</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="measure/Number" data-name="number">
+      <a href="../../Number.html">Number</a>
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">enum</span> Measure::<wbr>Weight::<wbr>Unit
+
+</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L70" target="_blank">
+        weight.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>
+      <a id="enum-members" class="anchor" href="#enum-members">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Enum Members
+    </h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="Gram">
+        <strong>Gram</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Grams">
+        <strong>Grams</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Kilogram">
+        <strong>Kilogram</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Kilograms">
+        <strong>Kilograms</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="KG">
+        <strong>KG</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Milligram">
+        <strong>Milligram</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Milligrams">
+        <strong>Milligrams</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="MG">
+        <strong>MG</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Pound">
+        <strong>Pound</strong> = <code><span class="n">3</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Pounds">
+        <strong>Pounds</strong> = <code><span class="n">3</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="LB">
+        <strong>LB</strong> = <code><span class="n">3</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Ounce">
+        <strong>Ounce</strong> = <code><span class="n">4</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Ounces">
+        <strong>Ounces</strong> = <code><span class="n">4</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="OZ">
+        <strong>OZ</strong> = <code><span class="n">4</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Ton">
+        <strong>Ton</strong> = <code><span class="n">5</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Tons">
+        <strong>Tons</strong> = <code><span class="n">5</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="T">
+        <strong>T</strong> = <code><span class="n">5</span></code>
+      </dt>
+      
+    
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#gram%3F-instance-method" class="signature"><strong>#gram?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#grams%3F-instance-method" class="signature"><strong>#grams?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#kg%3F-instance-method" class="signature"><strong>#kg?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#kilogram%3F-instance-method" class="signature"><strong>#kilogram?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#kilograms%3F-instance-method" class="signature"><strong>#kilograms?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#lb%3F-instance-method" class="signature"><strong>#lb?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mg%3F-instance-method" class="signature"><strong>#mg?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#milligram%3F-instance-method" class="signature"><strong>#milligram?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#milligrams%3F-instance-method" class="signature"><strong>#milligrams?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ounce%3F-instance-method" class="signature"><strong>#ounce?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ounces%3F-instance-method" class="signature"><strong>#ounces?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#oz%3F-instance-method" class="signature"><strong>#oz?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pound%3F-instance-method" class="signature"><strong>#pound?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pounds%3F-instance-method" class="signature"><strong>#pounds?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#t%3F-instance-method" class="signature"><strong>#t?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ton%3F-instance-method" class="signature"><strong>#ton?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tons%3F-instance-method" class="signature"><strong>#tons?</strong></a>
+        
+      </li>
+    
+  </ul>
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="gram?-instance-method">
+      <div class="signature">
+        
+        def <strong>gram?</strong>
+
+        <a class="method-permalink" href="#gram%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L71" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="grams?-instance-method">
+      <div class="signature">
+        
+        def <strong>grams?</strong>
+
+        <a class="method-permalink" href="#grams%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L72" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="kg?-instance-method">
+      <div class="signature">
+        
+        def <strong>kg?</strong>
+
+        <a class="method-permalink" href="#kg%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L75" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="kilogram?-instance-method">
+      <div class="signature">
+        
+        def <strong>kilogram?</strong>
+
+        <a class="method-permalink" href="#kilogram%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L73" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="kilograms?-instance-method">
+      <div class="signature">
+        
+        def <strong>kilograms?</strong>
+
+        <a class="method-permalink" href="#kilograms%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L74" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="lb?-instance-method">
+      <div class="signature">
+        
+        def <strong>lb?</strong>
+
+        <a class="method-permalink" href="#lb%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L81" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mg?-instance-method">
+      <div class="signature">
+        
+        def <strong>mg?</strong>
+
+        <a class="method-permalink" href="#mg%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L78" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="milligram?-instance-method">
+      <div class="signature">
+        
+        def <strong>milligram?</strong>
+
+        <a class="method-permalink" href="#milligram%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L76" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="milligrams?-instance-method">
+      <div class="signature">
+        
+        def <strong>milligrams?</strong>
+
+        <a class="method-permalink" href="#milligrams%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L77" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ounce?-instance-method">
+      <div class="signature">
+        
+        def <strong>ounce?</strong>
+
+        <a class="method-permalink" href="#ounce%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L82" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ounces?-instance-method">
+      <div class="signature">
+        
+        def <strong>ounces?</strong>
+
+        <a class="method-permalink" href="#ounces%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L83" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="oz?-instance-method">
+      <div class="signature">
+        
+        def <strong>oz?</strong>
+
+        <a class="method-permalink" href="#oz%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L84" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pound?-instance-method">
+      <div class="signature">
+        
+        def <strong>pound?</strong>
+
+        <a class="method-permalink" href="#pound%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L79" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pounds?-instance-method">
+      <div class="signature">
+        
+        def <strong>pounds?</strong>
+
+        <a class="method-permalink" href="#pounds%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L80" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="t?-instance-method">
+      <div class="signature">
+        
+        def <strong>t?</strong>
+
+        <a class="method-permalink" href="#t%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L87" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ton?-instance-method">
+      <div class="signature">
+        
+        def <strong>ton?</strong>
+
+        <a class="method-permalink" href="#ton%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L85" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tons?-instance-method">
+      <div class="signature">
+        
+        def <strong>tons?</strong>
+
+        <a class="method-permalink" href="#tons%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L86" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+</div>
+
+</body>
+</html>

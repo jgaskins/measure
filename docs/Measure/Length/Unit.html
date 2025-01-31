@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.10.1">
+<meta name="crystal_docs.project_version" content="dev">
+<meta name="crystal_docs.project_name" content="measure">
+
+
+
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../js/doc.js"></script>
+
+  <meta name="repository-name" content="measure">
+  <title>Measure::Length::Unit - measure dev</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../../index.html">
+          measure
+        </a>
+      </h1>
+
+      <span class="project-version">
+        dev
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="measure/Measure" data-name="measure">
+      <a href="../../Measure.html">Measure</a>
+      
+        <ul>
+  
+  <li class="parent open current" data-id="measure/Measure/Length" data-name="measure::length">
+      <a href="../../Measure/Length.html">Length</a>
+      
+        <ul>
+  
+  <li class=" current" data-id="measure/Measure/Length/Unit" data-name="measure::length::unit">
+      <a href="../../Measure/Length/Unit.html">Unit</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="measure/Measure/Weight" data-name="measure::weight">
+      <a href="../../Measure/Weight.html">Weight</a>
+      
+        <ul>
+  
+  <li class=" " data-id="measure/Measure/Weight/Unit" data-name="measure::weight::unit">
+      <a href="../../Measure/Weight/Unit.html">Unit</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="measure/Number" data-name="number">
+      <a href="../../Number.html">Number</a>
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">enum</span> Measure::<wbr>Length::<wbr>Unit
+
+</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L81" target="_blank">
+        length.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>
+      <a id="enum-members" class="anchor" href="#enum-members">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Enum Members
+    </h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="Kilometer">
+        <strong>Kilometer</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Kilometers">
+        <strong>Kilometers</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="KM">
+        <strong>KM</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Meter">
+        <strong>Meter</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Meters">
+        <strong>Meters</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Centimeter">
+        <strong>Centimeter</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Centimeters">
+        <strong>Centimeters</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="CM">
+        <strong>CM</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Millimeter">
+        <strong>Millimeter</strong> = <code><span class="n">3</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Millimeters">
+        <strong>Millimeters</strong> = <code><span class="n">3</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="MM">
+        <strong>MM</strong> = <code><span class="n">3</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Micrometer">
+        <strong>Micrometer</strong> = <code><span class="n">4</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Micrometers">
+        <strong>Micrometers</strong> = <code><span class="n">4</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Micron">
+        <strong>Micron</strong> = <code><span class="n">4</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Microns">
+        <strong>Microns</strong> = <code><span class="n">4</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Nanometer">
+        <strong>Nanometer</strong> = <code><span class="n">5</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Nanometers">
+        <strong>Nanometers</strong> = <code><span class="n">5</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="NM">
+        <strong>NM</strong> = <code><span class="n">5</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Foot">
+        <strong>Foot</strong> = <code><span class="n">6</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Feet">
+        <strong>Feet</strong> = <code><span class="n">6</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Yard">
+        <strong>Yard</strong> = <code><span class="n">7</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Yards">
+        <strong>Yards</strong> = <code><span class="n">7</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Inch">
+        <strong>Inch</strong> = <code><span class="n">8</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Inches">
+        <strong>Inches</strong> = <code><span class="n">8</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Mile">
+        <strong>Mile</strong> = <code><span class="n">9</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Miles">
+        <strong>Miles</strong> = <code><span class="n">9</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Mi">
+        <strong>Mi</strong> = <code><span class="n">9</span></code>
+      </dt>
+      
+    
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#centimeter%3F-instance-method" class="signature"><strong>#centimeter?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#centimeters%3F-instance-method" class="signature"><strong>#centimeters?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cm%3F-instance-method" class="signature"><strong>#cm?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#feet%3F-instance-method" class="signature"><strong>#feet?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#foot%3F-instance-method" class="signature"><strong>#foot?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#inch%3F-instance-method" class="signature"><strong>#inch?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#inches%3F-instance-method" class="signature"><strong>#inches?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#kilometer%3F-instance-method" class="signature"><strong>#kilometer?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#kilometers%3F-instance-method" class="signature"><strong>#kilometers?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#km%3F-instance-method" class="signature"><strong>#km?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#meter%3F-instance-method" class="signature"><strong>#meter?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#meters%3F-instance-method" class="signature"><strong>#meters?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mi%3F-instance-method" class="signature"><strong>#mi?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#micrometer%3F-instance-method" class="signature"><strong>#micrometer?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#micrometers%3F-instance-method" class="signature"><strong>#micrometers?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#micron%3F-instance-method" class="signature"><strong>#micron?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#microns%3F-instance-method" class="signature"><strong>#microns?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mile%3F-instance-method" class="signature"><strong>#mile?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#miles%3F-instance-method" class="signature"><strong>#miles?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#millimeter%3F-instance-method" class="signature"><strong>#millimeter?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#millimeters%3F-instance-method" class="signature"><strong>#millimeters?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mm%3F-instance-method" class="signature"><strong>#mm?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#nanometer%3F-instance-method" class="signature"><strong>#nanometer?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#nanometers%3F-instance-method" class="signature"><strong>#nanometers?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#nm%3F-instance-method" class="signature"><strong>#nm?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#yard%3F-instance-method" class="signature"><strong>#yard?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#yards%3F-instance-method" class="signature"><strong>#yards?</strong></a>
+        
+      </li>
+    
+  </ul>
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="centimeter?-instance-method">
+      <div class="signature">
+        
+        def <strong>centimeter?</strong>
+
+        <a class="method-permalink" href="#centimeter%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L89" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="centimeters?-instance-method">
+      <div class="signature">
+        
+        def <strong>centimeters?</strong>
+
+        <a class="method-permalink" href="#centimeters%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L90" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cm?-instance-method">
+      <div class="signature">
+        
+        def <strong>cm?</strong>
+
+        <a class="method-permalink" href="#cm%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L91" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="feet?-instance-method">
+      <div class="signature">
+        
+        def <strong>feet?</strong>
+
+        <a class="method-permalink" href="#feet%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L107" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="foot?-instance-method">
+      <div class="signature">
+        
+        def <strong>foot?</strong>
+
+        <a class="method-permalink" href="#foot%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L106" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="inch?-instance-method">
+      <div class="signature">
+        
+        def <strong>inch?</strong>
+
+        <a class="method-permalink" href="#inch%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L112" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="inches?-instance-method">
+      <div class="signature">
+        
+        def <strong>inches?</strong>
+
+        <a class="method-permalink" href="#inches%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L113" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="kilometer?-instance-method">
+      <div class="signature">
+        
+        def <strong>kilometer?</strong>
+
+        <a class="method-permalink" href="#kilometer%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L82" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="kilometers?-instance-method">
+      <div class="signature">
+        
+        def <strong>kilometers?</strong>
+
+        <a class="method-permalink" href="#kilometers%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L83" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="km?-instance-method">
+      <div class="signature">
+        
+        def <strong>km?</strong>
+
+        <a class="method-permalink" href="#km%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L84" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="meter?-instance-method">
+      <div class="signature">
+        
+        def <strong>meter?</strong>
+
+        <a class="method-permalink" href="#meter%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L86" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="meters?-instance-method">
+      <div class="signature">
+        
+        def <strong>meters?</strong>
+
+        <a class="method-permalink" href="#meters%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L87" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mi?-instance-method">
+      <div class="signature">
+        
+        def <strong>mi?</strong>
+
+        <a class="method-permalink" href="#mi%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L117" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="micrometer?-instance-method">
+      <div class="signature">
+        
+        def <strong>micrometer?</strong>
+
+        <a class="method-permalink" href="#micrometer%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L97" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="micrometers?-instance-method">
+      <div class="signature">
+        
+        def <strong>micrometers?</strong>
+
+        <a class="method-permalink" href="#micrometers%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L98" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="micron?-instance-method">
+      <div class="signature">
+        
+        def <strong>micron?</strong>
+
+        <a class="method-permalink" href="#micron%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L99" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="microns?-instance-method">
+      <div class="signature">
+        
+        def <strong>microns?</strong>
+
+        <a class="method-permalink" href="#microns%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L100" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mile?-instance-method">
+      <div class="signature">
+        
+        def <strong>mile?</strong>
+
+        <a class="method-permalink" href="#mile%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L115" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="miles?-instance-method">
+      <div class="signature">
+        
+        def <strong>miles?</strong>
+
+        <a class="method-permalink" href="#miles%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L116" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="millimeter?-instance-method">
+      <div class="signature">
+        
+        def <strong>millimeter?</strong>
+
+        <a class="method-permalink" href="#millimeter%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L93" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="millimeters?-instance-method">
+      <div class="signature">
+        
+        def <strong>millimeters?</strong>
+
+        <a class="method-permalink" href="#millimeters%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L94" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mm?-instance-method">
+      <div class="signature">
+        
+        def <strong>mm?</strong>
+
+        <a class="method-permalink" href="#mm%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L95" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="nanometer?-instance-method">
+      <div class="signature">
+        
+        def <strong>nanometer?</strong>
+
+        <a class="method-permalink" href="#nanometer%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L102" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="nanometers?-instance-method">
+      <div class="signature">
+        
+        def <strong>nanometers?</strong>
+
+        <a class="method-permalink" href="#nanometers%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L103" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="nm?-instance-method">
+      <div class="signature">
+        
+        def <strong>nm?</strong>
+
+        <a class="method-permalink" href="#nm%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L104" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="yard?-instance-method">
+      <div class="signature">
+        
+        def <strong>yard?</strong>
+
+        <a class="method-permalink" href="#yard%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L109" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="yards?-instance-method">
+      <div class="signature">
+        
+        def <strong>yards?</strong>
+
+        <a class="method-permalink" href="#yards%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L110" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+</div>
+
+</body>
+</html>

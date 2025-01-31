@@ -1,0 +1,13 @@
+name: measure
+version: 0.1.0
+
+authors:
+  - Jamie Gaskins <jgaskins@hey.com>
+
+development_dependencies:
+  measure:
+    path: .
+
+crystal: '>= 1.15.0'
+
+license: MIT

@@ -8,16 +8,16 @@ module Measure
     # The unit used in measuring the weight.
     getter unit : Unit
 
-    # Instantiate a `{{@type}}` instance with the given `magnitude` and `Unit`.
+    # Instantiate a `Weight` instance with the given `magnitude` and `Unit`.
     def initialize(@magnitude, @unit)
     end
 
-    # Returns the number of grams represented by this `{{@type}}` instance
+    # Returns the number of grams represented by this `Weight` instance
     def total_grams
       magnitude / coefficient
     end
 
-    # Output a human-readable representation of this `{{@type}}` to the given `IO`.
+    # Output a human-readable representation of this `Weight` to the given `IO`.
     def to_s(io) : Nil
       io << magnitude << ' '
       unit.to_s.downcase io
@@ -34,7 +34,7 @@ module Measure
       self.class.new(coefficient * magnitude, unit)
     end
 
-    # Add two `{{@type}}`s of any units together, returning an instance using
+    # Add two `Weight`s of any units together, returning an instance using
     # `self`'s `Unit`.
     #
     # ```

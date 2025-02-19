@@ -212,7 +212,7 @@ measure <span class="n">518.57</span><span class="t">M</span> (  <span class="n"
 crunits  <span class="n">13.28</span>k ( <span class="n">75.30</span>µs) (± <span class="n">0.71</span><span class="o">%</span>)  <span class="n">290</span>kB<span class="o">/</span>op  <span class="n">78776.24</span>× slower
 measure   <span class="n">1.05</span><span class="t">G</span> (  <span class="n">0.96</span>ns) (± <span class="n">1.42</span><span class="o">%</span>)   <span class="n">0.0</span><span class="t">B</span><span class="o">/</span>op           fastest</code></pre>
 <p>For some of these, the monotonic clock is overcounting how long it takes to run the block for <code><a href="Measure.html">Measure</a></code> because it doesn't have sufficient precision, so the real difference may be significantly larger. But even so, a factor of 360-245k is pretty huge. Relying on primitive 64-bit floats and enums makes <code><a href="Measure.html">Measure</a></code> significantly faster.</p>
-<p>Chances are, instantiating <code>Units::Measurement</code> instances won't be a bottleneck in your application, but it and the heap-memory usage (<code>Units</code> allocates almost 1MB of heap per instance) are factors to consider.</p>
+<p>Chances are, instantiating <code>Units::Measurement</code> instances won't be a bottleneck in your application, but it and the heap-memory usage (<code>Units::Measurement</code> allocates almost 1MB of heap per instance) are factors to consider.</p>
 <h2><a id="contributing" class="anchor" href="#contributing">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>

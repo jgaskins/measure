@@ -18,7 +18,7 @@ describe Measure::Length do
       1.foot  => 0.3048,
       1.meter => 1,
       1.yard  => 0.9144,
-      1.mile  => 0.3048*5280,
+      1.mile  => 1609.344,
     }.each do |measurement, meters|
       it "converts #{measurement} to #{meters} meters" do
         measurement.total_meters.should be_within 0.0001, of: meters
@@ -33,7 +33,7 @@ describe Measure::Length do
       {1.meter, 3.28084, Unit::Feet},
       {1.yard, 0.9144, Unit::Meters},
       {1.mile, 1609.344, Unit::Meters},
-      {1.mile, 1.609, Unit::Kilometers},
+      {1.mile, 1.609344, Unit::Kilometers},
       {5280.feet, 1, Unit::Mile},
       {1.kilometer, 1_000, Unit::Meters},
       {100.meters, 0.1, Unit::Kilometers},

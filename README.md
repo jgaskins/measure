@@ -70,8 +70,44 @@ It also supports conversions:
 # => Measure::Weight(@magnitude=50.0, @unit=Measure::Weight::Unit::Kilogram)
 50.grams.to(:ounces)
 # => Measure::Weight(@magnitude=1.763696, @unit=Measure::Weight::Unit::Ounce)
+```
+
+## Comparisons with similar projects
+
+`Measure` isn't the only Crystal shard that offers support for various units of
+measure. Below is a comparison with the ones I've tried.
+
+### `spider-gazelle/crunits` — `Units`
+
+This shard is a Crystal port of the [Ruby `unitwise` gem](https://github.com/joshwlewis/unitwise).
+The Ruby gem is _amazing_, to be clear, and the Crystal shard appears to support
+similar levels of flexibility and extensibility.
+
+The reason I chose not to use it and instead write `Measure` is that `Units`
+handles measurements as `BigDecimal` for the magnitude and `String` for the unit
+of measure. This has two primary drawbacks.
+
+The first is that, if you use the wrong unit of measure (misspell it, for example), you can't find out until run time. So if you wrote `"hours"` instead of `"hour"`, you may not notice until that code is in production. This fits the Ruby perspective well enough, but `Measure` leans on the Crystal type system so you can detect these sorts of bugs much earlier. You can argue that you should see it work before deploying it, but let's be real, we've all screwed this up. We've YOLOed code to prod, written tests that didn't test what we thought we were testing and never saw them fail, etc. We're not perfect. If you haven't, let me know and I'll hire you.
+
+The second is that using `BigDecimal` and `String` makes `crunits` very malleable (you don't have to patch the shard to add units, for example), but it's also significantly slower. `BigDecimal` allows arbitrary precision, but that precision has a performance cost. If you need this precision, use `crunits`. `String`s for units mean every instantiation, arithmetic operation, conversion, etc all involve string parsing. This adds a lot of overhead. On my machine, the benchmarks look like this:
 
 ```
+Instantiation
+crunits   4.84k (206.70µs) (± 1.50%)  908kB/op  245402.46× slower
+measure   1.19G (  0.84ns) (± 1.33%)   0.0B/op            fastest
+
+Arithmetic
+crunits   1.44M (693.46ns) (± 0.58%)  1.93kB/op  359.61× slower
+measure 518.57M (  1.93ns) (± 3.71%)    0.0B/op         fastest
+
+Conversion
+crunits  13.28k ( 75.30µs) (± 0.71%)  290kB/op  78776.24× slower
+measure   1.05G (  0.96ns) (± 1.42%)   0.0B/op           fastest
+```
+
+For some of these, the monotonic clock is overcounting how long it takes to run the block for `Measure` because it doesn't have sufficient precision, so the real difference may be significantly larger. But even so, a factor of 360-245k is pretty huge. Relying on primitive 64-bit floats and enums makes `Measure` significantly faster.
+
+Chances are, instantiating `Units::Measurement` instances won't be a bottleneck in your application, but it and the heap-memory usage (`Units::Measurement` allocates almost 1MB of heap per instance) are factors to consider.
 
 ## Contributing
 

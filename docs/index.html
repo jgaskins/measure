@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Crystal Docs 1.10.1">
-<meta name="crystal_docs.project_version" content="dev">
+<meta name="crystal_docs.project_version" content="main">
 <meta name="crystal_docs.project_name" content="measure">
 
 
@@ -14,7 +14,7 @@
 <script type="text/javascript" src="js/doc.js"></script>
 
   <meta name="repository-name" content="measure">
-  <title>measure dev</title>
+  <title>measure main</title>
   <script type="text/javascript">
   CrystalDocs.base_path = "";
   </script>
@@ -45,7 +45,7 @@
       </h1>
 
       <span class="project-version">
-        dev
+        main
       </span>
     </div>
   </div>
@@ -179,8 +179,40 @@
 <span class="n">50000</span>.grams.to(<span class="n">:kilograms</span>)
 <span class="c"># =&gt; Measure::Weight(@magnitude=50.0, @unit=Measure::Weight::Unit::Kilogram)</span>
 <span class="n">50</span>.grams.to(<span class="n">:ounces</span>)
-<span class="c"># =&gt; Measure::Weight(@magnitude=1.763696, @unit=Measure::Weight::Unit::Ounce)</span>
-</code></pre>
+<span class="c"># =&gt; Measure::Weight(@magnitude=1.763696, @unit=Measure::Weight::Unit::Ounce)</span></code></pre>
+<h2><a id="comparisons-with-similar-projects" class="anchor" href="#comparisons-with-similar-projects">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Comparisons with similar projects</h2>
+<p><code><a href="Measure.html">Measure</a></code> isn't the only Crystal shard that offers support for various units of
+measure. Below is a comparison with the ones I've tried.</p>
+<h3><a id="spider-gazellecrunits-units" class="anchor" href="#spider-gazellecrunits-units">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a><code>spider-gazelle/crunits</code> — <code>Units</code></h3>
+<p>This shard is a Crystal port of the <a href="https://github.com/joshwlewis/unitwise">Ruby <code>unitwise</code> gem</a>.
+The Ruby gem is <em>amazing</em>, to be clear, and the Crystal shard appears to support
+similar levels of flexibility and extensibility.</p>
+<p>The reason I chose not to use it and instead write <code><a href="Measure.html">Measure</a></code> is that <code>Units</code>
+handles measurements as <code>BigDecimal</code> for the magnitude and <code>String</code> for the unit
+of measure. This has two primary drawbacks.</p>
+<p>The first is that, if you use the wrong unit of measure (misspell it, for example), you can't find out until run time. So if you wrote <code>&quot;hours&quot;</code> instead of <code>&quot;hour&quot;</code>, you may not notice until that code is in production. This fits the Ruby perspective well enough, but <code><a href="Measure.html">Measure</a></code> leans on the Crystal type system so you can detect these sorts of bugs much earlier. You can argue that you should see it work before deploying it, but let's be real, we've all screwed this up. We've YOLOed code to prod, written tests that didn't test what we thought we were testing and never saw them fail, etc. We're not perfect. If you haven't, let me know and I'll hire you.</p>
+<p>The second is that using <code>BigDecimal</code> and <code>String</code> makes <code>crunits</code> very malleable (you don't have to patch the shard to add units, for example), but it's also significantly slower. <code>BigDecimal</code> allows arbitrary precision, but that precision has a performance cost. If you need this precision, use <code>crunits</code>. <code>String</code>s for units mean every instantiation, arithmetic operation, conversion, etc all involve string parsing. This adds a lot of overhead. On my machine, the benchmarks look like this:</p>
+<pre><code class="language-crystal"><span class="t">Instantiation</span>
+crunits   <span class="n">4.84</span>k (<span class="n">206.70</span>µs) (± <span class="n">1.50</span><span class="o">%</span>)  <span class="n">908</span>kB<span class="o">/</span>op  <span class="n">245402.46</span>× slower
+measure   <span class="n">1.19</span><span class="t">G</span> (  <span class="n">0.84</span>ns) (± <span class="n">1.33</span><span class="o">%</span>)   <span class="n">0.0</span><span class="t">B</span><span class="o">/</span>op            fastest
+
+<span class="t">Arithmetic</span>
+crunits   <span class="n">1.44</span><span class="t">M</span> (<span class="n">693.46</span>ns) (± <span class="n">0.58</span><span class="o">%</span>)  <span class="n">1.93</span>kB<span class="o">/</span>op  <span class="n">359.61</span>× slower
+measure <span class="n">518.57</span><span class="t">M</span> (  <span class="n">1.93</span>ns) (± <span class="n">3.71</span><span class="o">%</span>)    <span class="n">0.0</span><span class="t">B</span><span class="o">/</span>op         fastest
+
+<span class="t">Conversion</span>
+crunits  <span class="n">13.28</span>k ( <span class="n">75.30</span>µs) (± <span class="n">0.71</span><span class="o">%</span>)  <span class="n">290</span>kB<span class="o">/</span>op  <span class="n">78776.24</span>× slower
+measure   <span class="n">1.05</span><span class="t">G</span> (  <span class="n">0.96</span>ns) (± <span class="n">1.42</span><span class="o">%</span>)   <span class="n">0.0</span><span class="t">B</span><span class="o">/</span>op           fastest</code></pre>
+<p>For some of these, the monotonic clock is overcounting how long it takes to run the block for <code><a href="Measure.html">Measure</a></code> because it doesn't have sufficient precision, so the real difference may be significantly larger. But even so, a factor of 360-245k is pretty huge. Relying on primitive 64-bit floats and enums makes <code><a href="Measure.html">Measure</a></code> significantly faster.</p>
+<p>Chances are, instantiating <code>Units::Measurement</code> instances won't be a bottleneck in your application, but it and the heap-memory usage (<code>Units</code> allocates almost 1MB of heap per instance) are factors to consider.</p>
 <h2><a id="contributing" class="anchor" href="#contributing">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>

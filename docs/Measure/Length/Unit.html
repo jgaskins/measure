@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Crystal Docs 1.10.1">
-<meta name="crystal_docs.project_version" content="dev">
+<meta name="crystal_docs.project_version" content="main">
 <meta name="crystal_docs.project_name" content="measure">
 
 
@@ -14,7 +14,7 @@
 <script type="text/javascript" src="../../js/doc.js"></script>
 
   <meta name="repository-name" content="measure">
-  <title>Measure::Length::Unit - measure dev</title>
+  <title>Measure::Length::Unit - measure main</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../../";
   </script>
@@ -45,7 +45,7 @@
       </h1>
 
       <span class="project-version">
-        dev
+        main
       </span>
     </div>
   </div>
@@ -119,6 +119,19 @@
 
 
 
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>The units available to <code><a href="../../Measure/Length.html">Length</a></code> instances. Note that there are multiple
+aliases of each one. This allows you to say <code>length.to(:meters)</code> or
+<code>length.to(:km)</code>.</p>
+
 
 
 
@@ -142,7 +155,7 @@
   </h2>
   
     
-      <a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L81" target="_blank">
+      <a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L137" target="_blank">
         length.cr
       </a>
     
@@ -263,6 +276,11 @@
       </dt>
       
     
+      <dt class="entry-const" id="Ft">
+        <strong>Ft</strong> = <code><span class="n">6</span></code>
+      </dt>
+      
+    
       <dt class="entry-const" id="Yard">
         <strong>Yard</strong> = <code><span class="n">7</span></code>
       </dt>
@@ -273,6 +291,16 @@
       </dt>
       
     
+      <dt class="entry-const" id="Yd">
+        <strong>Yd</strong> = <code><span class="n">7</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Yds">
+        <strong>Yds</strong> = <code><span class="n">7</span></code>
+      </dt>
+      
+    
       <dt class="entry-const" id="Inch">
         <strong>Inch</strong> = <code><span class="n">8</span></code>
       </dt>
@@ -280,6 +308,11 @@
     
       <dt class="entry-const" id="Inches">
         <strong>Inches</strong> = <code><span class="n">8</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="In">
+        <strong>In</strong> = <code><span class="n">8</span></code>
       </dt>
       
     
@@ -340,6 +373,16 @@
     
       <li class="entry-summary">
         <a href="#foot%3F-instance-method" class="signature"><strong>#foot?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ft%3F-instance-method" class="signature"><strong>#ft?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#in%3F-instance-method" class="signature"><strong>#in?</strong></a>
         
       </li>
     
@@ -453,6 +496,16 @@
         
       </li>
     
+      <li class="entry-summary">
+        <a href="#yd%3F-instance-method" class="signature"><strong>#yd?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#yds%3F-instance-method" class="signature"><strong>#yds?</strong></a>
+        
+      </li>
+    
   </ul>
 
 
@@ -540,7 +593,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L89" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L145" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -556,7 +609,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L90" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L146" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -572,7 +625,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L91" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L147" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -588,7 +641,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L107" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L163" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -604,7 +657,39 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L106" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L162" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ft?-instance-method">
+      <div class="signature">
+        
+        def <strong>ft?</strong>
+
+        <a class="method-permalink" href="#ft%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L164" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="in?-instance-method">
+      <div class="signature">
+        
+        def <strong>in?</strong>
+
+        <a class="method-permalink" href="#in%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L173" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -620,7 +705,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L112" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L171" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -636,7 +721,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L113" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L172" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -652,7 +737,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L82" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L138" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -668,7 +753,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L83" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L139" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -684,7 +769,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L84" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L140" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -700,7 +785,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L86" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L142" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -716,7 +801,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L87" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L143" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -732,7 +817,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L117" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L177" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -748,7 +833,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L97" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L153" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -764,7 +849,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L98" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L154" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -780,7 +865,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L99" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L155" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -796,7 +881,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L100" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L156" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -812,7 +897,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L115" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L175" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -828,7 +913,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L116" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L176" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -844,7 +929,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L93" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L149" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -860,7 +945,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L94" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L150" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -876,7 +961,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L95" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L151" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -892,7 +977,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L102" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L158" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -908,7 +993,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L103" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L159" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -924,7 +1009,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L104" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L160" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -940,7 +1025,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L109" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L166" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -956,7 +1041,39 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L110" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L167" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="yd?-instance-method">
+      <div class="signature">
+        
+        def <strong>yd?</strong>
+
+        <a class="method-permalink" href="#yd%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L168" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="yds?-instance-method">
+      <div class="signature">
+        
+        def <strong>yds?</strong>
+
+        <a class="method-permalink" href="#yds%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L169" target="_blank">View source</a>]
         
       </div>
     </div>

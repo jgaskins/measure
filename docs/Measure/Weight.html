@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Crystal Docs 1.10.1">
-<meta name="crystal_docs.project_version" content="dev">
+<meta name="crystal_docs.project_version" content="main">
 <meta name="crystal_docs.project_name" content="measure">
 
 
@@ -14,7 +14,7 @@
 <script type="text/javascript" src="../js/doc.js"></script>
 
   <meta name="repository-name" content="measure">
-  <title>Measure::Weight - measure dev</title>
+  <title>Measure::Weight - measure main</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../";
   </script>
@@ -45,7 +45,7 @@
       </h1>
 
       <span class="project-version">
-        dev
+        main
       </span>
     </div>
   </div>
@@ -182,6 +182,8 @@
       <li class="entry-summary">
         <a href="#new%28magnitude%3AFloat64%2Cunit%3AMeasure%3A%3AWeight%3A%3AUnit%29-class-method" class="signature"><strong>.new</strong>(magnitude : Float64, unit : Measure::Weight::Unit)</a>
         
+          <div class="summary"><p>Instantiate a <code>{{@type}}</code> instance with the given <code><a href="../Measure/Weight.html#magnitude%3AFloat64-instance-method">#magnitude</a></code> and <code><a href="../Measure/Weight/Unit.html">Unit</a></code>.</p></div>
+        
       </li>
     
   </ul>
@@ -205,55 +207,77 @@
       <li class="entry-summary">
         <a href="#%2A%28scalar%3ANumber%29%3Aself-instance-method" class="signature"><strong>#*</strong>(scalar : Number) : <span class="k">self</span></a>
         
+          <div class="summary"><p>Multiply by a scalar value</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#%2B%28other%3Aself%29%3Aself-instance-method" class="signature"><strong>#+</strong>(other : <span class="k">self</span>) : <span class="k">self</span></a>
+        
+          <div class="summary"><p>Add two <code>{{@type}}</code>s of any units together, returning an instance using <code>self</code>'s <code><a href="../Measure/Weight/Unit.html">Unit</a></code>.</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#-%28other%3Aself%29%3Aself-instance-method" class="signature"><strong>#-</strong>(other : <span class="k">self</span>) : <span class="k">self</span></a>
         
+          <div class="summary"><p>Subtract a <code><a href="../Measure/Length.html">Length</a></code> from <code>self</code>, returning an instance using <code>self</code>'s <code><a href="../Measure/Weight/Unit.html">Unit</a></code>.</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#/%28scalar%3ANumber%29%3Aself-instance-method" class="signature"><strong>#/</strong>(scalar : Number) : <span class="k">self</span></a>
+        
+          <div class="summary"><p>Multiply by a scalar value</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#%3C%3D%3E%28other%3Aself%29-instance-method" class="signature"><strong>#<=></strong>(other : <span class="k">self</span>)</a>
         
+          <div class="summary"><p>Returns <code>-1</code> if <code>self</code> is less than <code>other</code>, <code>0</code> if they're equal, or <code>-1</code> otherwise.</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#%3D%3D%28other%3Aself%29-instance-method" class="signature"><strong>#==</strong>(other : <span class="k">self</span>)</a>
+        
+          <div class="summary"><p>Returns <code>true</code> if <code>self</code> and <code>other</code> are close enough to each other to be considered equivalent — within a femtogram (1/1_000_000_000_000_000th of a gram).</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#magnitude%3AFloat64-instance-method" class="signature"><strong>#magnitude</strong> : Float64</a>
         
+          <div class="summary"><p>The numeric part of the measurement — the <code>1</code> in <code>1.kilogram</code>.</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#to%28unit%3AUnit%29%3Aself-instance-method" class="signature"><strong>#to</strong>(unit : Unit) : <span class="k">self</span></a>
+        
+          <div class="summary"><p>Convert this instance to the given <code><a href="../Measure/Weight/Unit.html">Unit</a></code>.</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#to_s%28io%29%3ANil-instance-method" class="signature"><strong>#to_s</strong>(io) : Nil</a>
         
+          <div class="summary"><p>Output a human-readable representation of this <code>{{@type}}</code> to the given <code>IO</code>.</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#total_grams-instance-method" class="signature"><strong>#total_grams</strong></a>
         
+          <div class="summary"><p>Returns the number of grams represented by this <code>{{@type}}</code> instance</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#unit%3AUnit-instance-method" class="signature"><strong>#unit</strong> : Unit</a>
+        
+          <div class="summary"><p>The unit used in measuring the weight.</p></div>
         
       </li>
     
@@ -335,10 +359,15 @@
         <a class="method-permalink" href="#new%28magnitude%3AFloat64%2Cunit%3AMeasure%3A%3AWeight%3A%3AUnit%29-class-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Instantiate a <code>{{@type}}</code> instance with the given <code><a href="../Measure/Weight.html#magnitude%3AFloat64-instance-method">#magnitude</a></code> and <code><a href="../Measure/Weight/Unit.html">Unit</a></code>.</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L8" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L12" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -367,10 +396,17 @@
         <a class="method-permalink" href="#%2A%28scalar%3ANumber%29%3Aself-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Multiply by a scalar value</p>
+<pre><code class="language-crystal"><span class="n">2</span>.kg <span class="o">*</span> <span class="n">5</span>
+<span class="c"># =&gt; Measure::Length(@magnitude=10.0, @unit=Measure::Length::Unit::Kilogram)</span></code></pre>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L33" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L65" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -383,10 +419,18 @@
         <a class="method-permalink" href="#%2B%28other%3Aself%29%3Aself-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Add two <code>{{@type}}</code>s of any units together, returning an instance using
+<code>self</code>'s <code><a href="../Measure/Weight/Unit.html">Unit</a></code>.</p>
+<pre><code class="language-crystal"><span class="n">1</span>.kilogram <span class="o">+</span> <span class="n">1</span>.pound
+<span class="c"># =&gt; Measure::Weight(@magnitude=1.4535929094356397, @unit=Measure::Weight::Unit::Kilogram)</span></code></pre>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L25" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L44" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -399,10 +443,18 @@
         <a class="method-permalink" href="#-%28other%3Aself%29%3Aself-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Subtract a <code><a href="../Measure/Length.html">Length</a></code> from <code>self</code>, returning an instance using <code>self</code>'s
+<code><a href="../Measure/Weight/Unit.html">Unit</a></code>.</p>
+<pre><code class="language-crystal"><span class="n">1</span>.kilogram <span class="o">-</span> <span class="n">1</span>.pound
+<span class="c"># =&gt; Measure::Weight(@magnitude=0.5464070905643603, @unit=Measure::Weight::Unit::Kilogram)</span></code></pre>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L29" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L55" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -415,10 +467,17 @@
         <a class="method-permalink" href="#/%28scalar%3ANumber%29%3Aself-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Multiply by a scalar value</p>
+<pre><code class="language-crystal"><span class="n">10</span>.kg <span class="o">/</span> <span class="n">2</span>
+<span class="c"># =&gt; Measure::Length(@magnitude=2.0, @unit=Measure::Length::Unit::Kilogram)</span></code></pre>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L37" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L75" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -431,10 +490,21 @@
         <a class="method-permalink" href="#%3C%3D%3E%28other%3Aself%29-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Returns <code>-1</code> if <code>self</code> is less than <code>other</code>, <code>0</code> if they're equal, or <code>-1</code>
+otherwise.</p>
+<pre><code class="language-crystal"><span class="n">1</span>.kg <span class="o">&lt;=&gt;</span> <span class="n">1</span>.lb <span class="c"># =&gt; 1</span>
+<span class="n">1</span>.lb <span class="o">&lt;=&gt;</span> <span class="n">1</span>.lb <span class="c"># =&gt; 0</span>
+<span class="n">1</span>.lb <span class="o">&lt;=&gt;</span> <span class="n">1</span>.kg <span class="c"># =&gt; -1</span>
+<span class="n">1</span>.lb <span class="o">&lt;</span> <span class="n">1</span>.kg   <span class="c"># =&gt; true</span>
+<span class="n">1</span>.lb <span class="o">&gt;</span> <span class="n">1</span>.kg   <span class="c"># =&gt; false</span></code></pre>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L42" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L90" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -447,10 +517,19 @@
         <a class="method-permalink" href="#%3D%3D%28other%3Aself%29-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if <code>self</code> and <code>other</code> are close enough to each other to be
+considered equivalent — within a femtogram (1/1_000_000_000_000_000th of
+a gram). This isn't <em>technically</em> correct, but if you need that level of
+precision, <a href="https://github.com/jgaskins/measure/issues/new">open an issue</a>
+and we can discuss how to support it.</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L46" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L99" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -463,10 +542,15 @@
         <a class="method-permalink" href="#magnitude%3AFloat64-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>The numeric part of the measurement — the <code>1</code> in <code>1.kilogram</code>.</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L6" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -479,10 +563,17 @@
         <a class="method-permalink" href="#to%28unit%3AUnit%29%3Aself-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Convert this instance to the given <code><a href="../Measure/Weight/Unit.html">Unit</a></code>.</p>
+<pre><code class="language-crystal"><span class="n">1</span>.kilogram.to(<span class="n">:lbs</span>)
+<span class="c"># =&gt; Measure::Weight(@magnitude=2.20462, @unit=Measure::Weight::Unit::Pound)</span></code></pre>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L20" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L32" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -495,10 +586,15 @@
         <a class="method-permalink" href="#to_s%28io%29%3ANil-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Output a human-readable representation of this <code>{{@type}}</code> to the given <code>IO</code>.</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L15" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L21" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -511,10 +607,15 @@
         <a class="method-permalink" href="#total_grams-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Returns the number of grams represented by this <code>{{@type}}</code> instance</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L11" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L16" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -527,10 +628,15 @@
         <a class="method-permalink" href="#unit%3AUnit-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>The unit used in measuring the weight.</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L6" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L9" target="_blank">View source</a>]
         
       </div>
     </div>

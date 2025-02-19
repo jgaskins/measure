@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Crystal Docs 1.10.1">
-<meta name="crystal_docs.project_version" content="dev">
+<meta name="crystal_docs.project_version" content="main">
 <meta name="crystal_docs.project_name" content="measure">
 
 
@@ -14,7 +14,7 @@
 <script type="text/javascript" src="../../js/doc.js"></script>
 
   <meta name="repository-name" content="measure">
-  <title>Measure::Weight::Unit - measure dev</title>
+  <title>Measure::Weight::Unit - measure main</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../../";
   </script>
@@ -45,7 +45,7 @@
       </h1>
 
       <span class="project-version">
-        dev
+        main
       </span>
     </div>
   </div>
@@ -119,6 +119,19 @@
 
 
 
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>The units available to <code><a href="../../Measure/Weight.html">Weight</a></code> instances. Note that there are multiple
+aliases of each one. This allows you to say <code>weight.to(:pounds)</code> or
+<code>weight.to(:kilograms)</code>.</p>
+
 
 
 
@@ -142,7 +155,7 @@
   </h2>
   
     
-      <a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L70" target="_blank">
+      <a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L126" target="_blank">
         weight.cr
       </a>
     
@@ -170,6 +183,11 @@
     
       <dt class="entry-const" id="Grams">
         <strong>Grams</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="G">
+        <strong>G</strong> = <code><span class="n">0</span></code>
       </dt>
       
     
@@ -215,6 +233,11 @@
     
       <dt class="entry-const" id="LB">
         <strong>LB</strong> = <code><span class="n">3</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="LBS">
+        <strong>LBS</strong> = <code><span class="n">3</span></code>
       </dt>
       
     
@@ -269,6 +292,11 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
+        <a href="#g%3F-instance-method" class="signature"><strong>#g?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#gram%3F-instance-method" class="signature"><strong>#gram?</strong></a>
         
       </li>
@@ -295,6 +323,11 @@
     
       <li class="entry-summary">
         <a href="#lb%3F-instance-method" class="signature"><strong>#lb?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#lbs%3F-instance-method" class="signature"><strong>#lbs?</strong></a>
         
       </li>
     
@@ -429,6 +462,22 @@
     Instance Method Detail
   </h2>
   
+    <div class="entry-detail" id="g?-instance-method">
+      <div class="signature">
+        
+        def <strong>g?</strong>
+
+        <a class="method-permalink" href="#g%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L129" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
     <div class="entry-detail" id="gram?-instance-method">
       <div class="signature">
         
@@ -440,7 +489,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L71" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L127" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -456,7 +505,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L72" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L128" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -472,7 +521,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L75" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L133" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -488,7 +537,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L73" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L131" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -504,7 +553,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L74" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L132" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -520,7 +569,23 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L81" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L141" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="lbs?-instance-method">
+      <div class="signature">
+        
+        def <strong>lbs?</strong>
+
+        <a class="method-permalink" href="#lbs%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L142" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -536,7 +601,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L78" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L137" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -552,7 +617,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L76" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L135" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -568,7 +633,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L77" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L136" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -584,7 +649,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L82" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L144" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -600,7 +665,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L83" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L145" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -616,7 +681,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L84" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L146" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -632,7 +697,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L79" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L139" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -648,7 +713,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L80" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L140" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -664,7 +729,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L87" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L150" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -680,7 +745,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L85" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L148" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -696,7 +761,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L86" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L149" target="_blank">View source</a>]
         
       </div>
     </div>

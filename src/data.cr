@@ -38,8 +38,6 @@ struct Measure::Data
   end
 
   def ==(other : self)
-    pp self: { inspect: self, total_bytes: total_bytes},
-      other: { inspect: other, total_bytes: other.total_bytes }
     # If it's within 1 bit, we can call it close enough
     (total_bytes - other.total_bytes).abs < 1/8
   end

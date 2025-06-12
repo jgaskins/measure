@@ -72,14 +72,21 @@ It also supports conversions:
 # => Measure::Weight(@magnitude=1.763696, @unit=Measure::Weight::Unit::Ounce)
 ```
 
-## Comparisons with similar projects
+## Precision
 
-`Measure` isn't the only Crystal shard that offers support for various units of
-measure. Below is a comparison with the ones I've tried.
+It's important to note that this shard stores the magnitude of the measurement as a `Float64`. This means it is limited to the precision 64-bit IEEE754 floating-point numbers.
 
-### `spider-gazelle/crunits` — `Units`
+### Why [`Float64`](https://crystal-lang.org/api/1.16.3/Float64.html) when [`BigDecimal`](https://crystal-lang.org/api/1.16.3/BigDecimal.html) is right there?
 
-This shard is a Crystal port of the [Ruby `unitwise` gem](https://github.com/joshwlewis/unitwise).
+Measurements of nearly everything are less precise than we think they are. If you pull out a tape measure and measure something as being 10 feet long, that measurement is only as precise as your eyes, the placement of both ends of the tape, and the markings on the tape itself. It might be within 1/16th of an inch, but it's not going to be *exactly* 10 feet. Even objects measured and cut by machine are subject to the precision of that machine — they may be within 1/64th of an inch, but they won't be *exactly* 10 feet, either.
+
+The point is that measurements just need to be close enough. `Float64` gets us close enough.
+
+The [`spider-gazelle/crunits`](https://github.com/spider-gazelle/crunits) shard offers arbitrary precision for measurements. It's also a lot slower and doesn't offer the same compile-time guarantees that this shard does. But if you feel you need arbitrary precision, use `crunits`.
+
+<details><summary>Comparison to <code>crunits</code></summary>
+
+`crunits` is a Crystal port of the [Ruby `unitwise` gem](https://github.com/joshwlewis/unitwise).
 The Ruby gem is _amazing_, to be clear, and the Crystal shard appears to support
 similar levels of flexibility and extensibility.
 
@@ -108,6 +115,8 @@ measure   1.05G (  0.96ns) (± 1.42%)   0.0B/op           fastest
 For some of these, the monotonic clock is overcounting how long it takes to run the block for `Measure` because it doesn't have sufficient precision, so the real difference may be significantly larger. But even so, a factor of 360-245k is pretty huge. Relying on primitive 64-bit floats and enums makes `Measure` significantly faster.
 
 Chances are, instantiating `Units::Measurement` instances won't be a bottleneck in your application, but it and the heap-memory usage (`Units::Measurement` allocates almost 1MB of heap per instance) are factors to consider.
+
+</details>
 
 ## Contributing
 

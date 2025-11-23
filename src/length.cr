@@ -100,8 +100,8 @@ module Measure
     # precision, [open an issue](https://github.com/jgaskins/measure/issues/new)
     # and we can discuss how to support it.
     def ==(other : self)
-      # If it's within a femtometer, we can call it close enough
-      (total_meters - other.total_meters).abs < 1e-15
+      # If it's within the float ε, we can call it close enough
+      (total_meters - other.total_meters).abs < Float64::EPSILON
     end
 
     private def coefficient(unit : Unit = self.unit)

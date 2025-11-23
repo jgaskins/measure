@@ -97,8 +97,8 @@ module Measure
     # precision, [open an issue](https://github.com/jgaskins/measure/issues/new)
     # and we can discuss how to support it.
     def ==(other : self)
-      # If it's within a femtogram, we can call it close enough
-      (total_grams - other.total_grams).abs < 1e-15
+      # If it's within the float ε, we can call it close enough
+      (total_grams - other.total_grams).abs < Float64::EPSILON
     end
 
     private def coefficient(unit : Unit = self.unit)

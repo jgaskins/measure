@@ -132,6 +132,10 @@ describe Measure::Length do
         [1.foot, 12.inches],
         [1.yard, 3.feet, 36.inches],
         [1.kilometer, 1_000.meters],
+        # Floats are fun: 0.1 + 0.2 == 0.30000000000000004
+        # We ignore rounding errors like this because even our unit conversions
+        # aren't this precise.
+        [0.3.meters, (0.1 + 0.2).meters],
       }.each &.each_permutation 2 do |(a, b)|
         it "treats #{a} as equal to #{b}" do
           a.should eq b

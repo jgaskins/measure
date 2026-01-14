@@ -71,6 +71,41 @@ struct Measure::Data
     end
   end
 
+  def to_s(io : IO) : Nil
+    io << if magnitude.to_i64 == magnitude
+      magnitude.to_i64
+    else
+      magnitude
+    end
+
+    io << case unit
+    in .bit?, .bits?
+      'b'
+    in .byte?, .bytes?, .b?
+      'B'
+    in .kilobyte?, .kilobytes?, .kb?
+      "KB"
+    in .megabyte?, .megabytes?, .mb?
+      "MB"
+    in .gigabyte?, .gigabytes?, .gb?
+      "GB"
+    in .terabyte?, .terabytes?, .tb?
+      "TB"
+    in .petabyte?, .petabytes?, .pb?
+      "PB"
+    in .kibibyte?, .kibibytes?, .ki_b?
+      "KiB"
+    in .mibibyte?, .mibibytes?, .mi_b?
+      "MiB"
+    in .gibibyte?, .gibibytes?, .gi_b?
+      "GiB"
+    in .tibibyte?, .tibibytes?, .ti_b?
+      "TiB"
+    in .pibibyte?, .pibibytes?, .pi_b?
+      "PiB"
+    end
+  end
+
   enum Unit
     Bit
     Bits = Bit

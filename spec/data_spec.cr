@@ -29,8 +29,8 @@ describe Measure::Data do
 
   describe "#to(unit : Unit)" do
     {
-      1.byte => 1.byte,
-      1.byte => 8.bits,
+      1.byte     => 1.byte,
+      1.byte     => 8.bits,
       1.kilobyte => 1_000.bytes,
       1.kibibyte => 1.024.kilobytes,
       1.kibibyte => 1_024.bytes,
@@ -166,6 +166,37 @@ describe Measure::Data do
       it "returns false if the data is not less than the other" do
         1.kilobyte.should_not be >= 1.kibibyte
         1.kibibyte.should_not be >= 2.kilobytes
+      end
+    end
+  end
+
+  describe "#to_s" do
+    {
+      1.bit         => "1b",
+      1.byte        => "1B",
+      1.kilobyte    => "1KB",
+      1.5.kilobytes => "1.5KB",
+      1.kibibyte    => "1KiB",
+      1.5.kibibytes => "1.5KiB",
+      1.megabyte    => "1MB",
+      1.5.megabytes => "1.5MB",
+      1.mibibyte    => "1MiB",
+      1.5.mibibytes => "1.5MiB",
+      1.gigabyte    => "1GB",
+      1.5.gigabytes => "1.5GB",
+      1.gibibyte    => "1GiB",
+      1.5.gibibytes => "1.5GiB",
+      1.terabyte    => "1TB",
+      1.5.terabytes => "1.5TB",
+      1.tibibyte    => "1TiB",
+      1.5.tibibytes => "1.5TiB",
+      1.petabyte    => "1PB",
+      1.5.petabytes => "1.5PB",
+      1.pibibyte    => "1PiB",
+      1.5.pibibytes => "1.5PiB",
+    }.each do |value, string|
+      it "stringifies #{value.inspect} as #{string.inspect}" do
+        value.to_s.should eq string
       end
     end
   end

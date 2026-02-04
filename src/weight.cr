@@ -110,15 +110,17 @@ module Measure
       in .milligram?, .milligrams?, .mg?
         1_000
       in .pound?, .pounds?, .lb?, .lbs?
-        POUNDS_PER_GRAM
+        1 / (KILOGRAMS_PER_POUND * 1000)
       in .ounce?, .ounces?, .oz?
-        POUNDS_PER_GRAM * 16
+        16 / (KILOGRAMS_PER_POUND * 1000)
       in .ton?, .tons?, .t?
-        POUNDS_PER_GRAM / 2_000
+        1 / (KILOGRAMS_PER_POUND * 2_000_000)
       end
     end
 
-    private POUNDS_PER_GRAM = 0.00220462
+    # The US National Bureau of Standards defines 1 pound as precisely this many kg.
+    # https://books.google.com/books?id=4aWN-VRV1AoC&pg=PA13#v=onepage&q&f=false
+    private KILOGRAMS_PER_POUND = 0.45359237
 
     # The units available to `Weight` instances. Note that there are multiple
     # aliases of each one. This allows you to say `weight.to(:pounds)` or

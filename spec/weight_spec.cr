@@ -19,7 +19,7 @@ describe Measure::Weight do
       1.milligram => 0.001,
       1.pound     => 453.592,
       1.ounce     => 28.3495,
-      1.ton       => 907_185.81887,
+      1.ton       => 907_184.74,
     }.each do |measurement, grams|
       it "converts #{measurement} to #{grams} grams" do
         measurement.total_grams.should be_within 0.001, of: grams

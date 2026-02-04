@@ -106,15 +106,29 @@ module Measure
       in .liter?, .liters?, .l?
         1
       in .milliliter?, .milliliters?, .ml?
-        1_000
+        1e3
       in .centiliter?, .centiliters?, .cl?
-        100
+        1e2
       in .kiloliter?, .kiloliters?, .kl?
-        0.001
+        1e-3
       in .cubic_meter?, .cubic_meters?, .m3?
-        0.001
+        1e-3
       in .cubic_centimeter?, .cubic_centimeters?, .cc?, .cm3?
-        1_000
+        1e3
+      in .cubic_millimeter?, .cubic_millimeters?, .mm3?
+        1e6
+      in .cubic_micrometer?, .cubic_micrometers?, .cubic_micron?, .cubic_microns?
+        1e15
+      in .cubic_nanometer?, .cubic_nanometers?, .nm3?
+        1e24
+      in .cubic_foot?, .cubic_feet?, .ft3?
+        1 / LITERS_PER_CUBIC_FOOT
+      in .cubic_yard?, .cubic_yards?, .yd3?
+        1 / (LITERS_PER_CUBIC_FOOT * 27)
+      in .cubic_inch?, .cubic_inches?, .in3?
+        1728 / LITERS_PER_CUBIC_FOOT
+      in .cubic_mile?, .cubic_miles?, .mi3?
+        1.0 / (LITERS_PER_CUBIC_FOOT * 5280.0 ** 3)
       in .gallon?, .gallons?, .gal?
         GALLONS_PER_LITER
       in .quart?, .quarts?, .qt?
@@ -132,7 +146,8 @@ module Measure
       end
     end
 
-    private GALLONS_PER_LITER = 0.264172
+    private LITERS_PER_CUBIC_FOOT = 28.316846592
+    private GALLONS_PER_LITER     =     0.264172
 
     # The units available to `Volume` instances. Note that there are multiple
     # aliases of each one. This allows you to say `volume.to(:liters)` or
@@ -162,6 +177,35 @@ module Measure
       CubicCentimeters = CubicCentimeter
       CC               = CubicCentimeter
       CM3              = CubicCentimeter
+
+      CubicMillimeter
+      CubicMillimeters = CubicMillimeter
+      MM3              = CubicMillimeter
+
+      CubicMicrometer
+      CubicMicrometers = CubicMicrometer
+      CubicMicron      = CubicMicrometer
+      CubicMicrons     = CubicMicrometer
+
+      CubicNanometer
+      CubicNanometers = CubicNanometer
+      NM3             = CubicNanometer
+
+      CubicFoot
+      CubicFeet = CubicFoot
+      Ft3       = CubicFoot
+
+      CubicYard
+      CubicYards = CubicYard
+      Yd3        = CubicYard
+
+      CubicInch
+      CubicInches = CubicInch
+      In3         = CubicInch
+
+      CubicMile
+      CubicMiles = CubicMile
+      Mi3        = CubicMile
 
       Gallon
       Gallons = Gallon

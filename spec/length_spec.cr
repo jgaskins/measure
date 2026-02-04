@@ -106,6 +106,20 @@ describe Measure::Length do
       end
     end
 
+    describe "#*(length : Length)" do
+      [
+        {2.inches, 3.inches, 6.square_inches},
+        {2.feet, 1.yard, 6.square_feet},
+        {2.feet, 3.feet, 6.square_feet},
+        {2.feet, 3.feet, 6.square_feet},
+        {2.feet, 3.feet, 6.square_feet},
+      ].each do |a, b, result|
+        it "multiplies #{a} by #{b} to get #{result}" do
+          (a * b).should eq result
+        end
+      end
+    end
+
     describe "#/(scalar : Number)" do
       [
         {6.feet, 3, 2.feet},

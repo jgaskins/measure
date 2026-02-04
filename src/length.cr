@@ -1,5 +1,7 @@
 require "json"
 
+require "./area"
+
 module Measure
   struct Length
     include Comparable(self)
@@ -69,7 +71,58 @@ module Measure
       self.class.new(magnitude * scalar, unit)
     end
 
-    # Multiply by a scalar value
+    # Multiply by another `Length` to get an `Area`
+    #
+    # ```
+    # 2.meters * 3.meters
+    # # => Measure::Area(@magnitude=6.0, @unit=Measure::Area::Unit::SquareMeter)
+    # ```
+    def *(other : Length) : Area
+      case unit
+      in .inches?, .inch?, .in?
+        Area.new(magnitude * other.to(unit).magnitude, :square_inches)
+      in .feet?, .foot?, .ft?
+        Area.new(magnitude * other.to(unit).magnitude, :square_feet)
+      in .yards?, .yard?, .yds?, .yd?
+        Area.new(magnitude * other.to(unit).magnitude, :square_yards)
+      in .miles?, .mile?, .mi?
+        Area.new(magnitude * other.to(unit).magnitude, :square_miles)
+      in .meters?, .meter?
+        Area.new(magnitude * other.to(unit).magnitude, :square_meters)
+      in .kilometers?, .kilometer?, .km?
+        Area.new(magnitude * other.to(unit).magnitude, :square_kilometers)
+      in .centimeters?, .centimeter?, .cm?
+        Area.new(magnitude * other.to(unit).magnitude, :square_centimeters)
+      in .millimeters?, .millimeter?, .mm?
+        Area.new(magnitude * other.to(unit).magnitude, :square_millimeters)
+      in .micrometers?, .micrometer?, .microns?, .micron?
+        Area.new(magnitude * other.to(unit).magnitude, :square_micrometer)
+      in .nanometers?, .nanometer?, .nm?
+        Area.new(magnitude * other.to(unit).magnitude, :square_nanometer)
+      end
+    end
+
+    # Return the square of this length as an `Area`
+    #
+    # ```
+    # 2.meters.squared
+    # # => Measure::Area(@magnitude=4.0, @unit=Measure::Area::Unit::SquareMeter)
+    # ```
+    def squared : Area
+      self * self
+    end
+
+    # Return the cube of this length as a `Volume`
+    #
+    # ```
+    # 2.meters.cubed
+    # # => Measure::Volume(@magnitude=8.0, @unit=Measure::Volume::Unit::CubicMeter)
+    # ```
+    def cubed : Volume
+      squared * self
+    end
+
+    # Divide by a scalar value
     #
     # ```
     # 10.miles / 2

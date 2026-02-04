@@ -27,6 +27,10 @@ describe Measure::Volume do
       1.tsp        => 0.00492892,
       1.m3         => 1_000,
       1.cc         => 0.001,
+      1.mm3        => 1e-6,
+      1.ft3        => 28.316846592,
+      1.yd3        => 764.554857984,
+      1.in3        => 0.016387064,
     }.each do |measurement, liters|
       it "converts #{measurement} to #{liters} liters" do
         measurement.total_liters.should be_within 0.0001, of: liters
@@ -53,6 +57,12 @@ describe Measure::Volume do
       {1.cc, 1, Unit::Milliliters},
       {1.tbsp, 3, Unit::Teaspoons},
       {1.fl_oz, 2, Unit::Tablespoons},
+      {1.ft3, 1728, Unit::CubicInches},
+      {1.yd3, 27, Unit::CubicFeet},
+      {1.ft3, 28.316846592, Unit::Liters},
+      {1.in3, 16.387064, Unit::Milliliters},
+      {1.m3, 35.3147, Unit::CubicFeet},
+      {1.ft3, 7.48052, Unit::Gallons},
     }.each do |measurement, magnitude, unit|
       it "converts #{measurement} to #{magnitude} #{unit}" do
         measurement.to(unit).magnitude.should be_within 0.001, of: magnitude

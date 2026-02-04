@@ -1,7 +1,8 @@
+require "./volume"
+require "./area"
 require "./length"
 require "./weight"
 require "./data"
-require "./volume"
 
 # TODO: Write documentation for `Measure`
 module Measure

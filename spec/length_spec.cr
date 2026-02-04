@@ -137,6 +137,31 @@ describe Measure::Length do
         end
       end
     end
+
+    describe "#squared" do
+      {
+        {3.feet, 9.square_feet},
+        {1.yard, 1.square_yard},
+        {100.mm, 0.01.square_meters},
+        {100.microns, 0.01.square_millimeters},
+      }.each do |length, result|
+        it "converts #{length} cubed to #{result}" do
+          length.squared.should eq result
+        end
+      end
+    end
+
+    describe "#cubed" do
+      {
+        {3.feet, 27.cubic_feet},
+        {1.yard, 1.cubic_yard},
+        {3.mm, 27.cubic_millimeters},
+      }.each do |length, result|
+        it "converts #{length} cubed to #{result}" do
+          length.cubed.should eq result
+        end
+      end
+    end
   end
 
   describe "inequality operators" do

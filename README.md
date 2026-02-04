@@ -47,6 +47,20 @@ You can also convert measurements to other units:
 # => Measure::Length(@magnitude=72.0, @unit=Measure::Length::Unit::Inch)
 ```
 
+## Area and Volume
+
+You can even multiply two instances of a `Measure::Length` to get a `Measure::Area`:
+
+```crystal
+3.feet * 3.feet # => Measure::Area(@magnitude=9.0, @unit=Measure::Area::Unit::SquareFoot)
+```
+
+And then multiply that to get a `Measure::Volume`:
+
+```crystal
+3.feet * 3.feet * 3.feet # => Measure::Volume(@magnitude=27.0, @unit=Measure::Volume::Unit::CubicFoot)
+```
+
 The full list of length units are available [here](https://jgaskins.dev/measure/Measure/Length/Unit.html).
 
 ### Weight

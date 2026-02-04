@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.18.2">
+<meta name="crystal_docs.project_version" content="">
+<meta name="crystal_docs.project_name" content="measure">
+
+
+
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../js/doc.js"></script>
+
+  <meta name="repository-name" content="measure">
+  <title>Measure::Data::Unit - measure </title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../../index.html">
+          measure
+        </a>
+      </h1>
+
+      <span class="project-version">
+        
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="measure/Measure" data-name="measure">
+      <a href="../../Measure.html">Measure</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="measure/Measure/Area" data-name="measure::area">
+      <a href="../../Measure/Area.html">Area</a>
+      
+        <ul>
+  
+  <li class=" " data-id="measure/Measure/Area/Unit" data-name="measure::area::unit">
+      <a href="../../Measure/Area/Unit.html">Unit</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent open current" data-id="measure/Measure/Data" data-name="measure::data">
+      <a href="../../Measure/Data.html">Data</a>
+      
+        <ul>
+  
+  <li class=" current" data-id="measure/Measure/Data/Unit" data-name="measure::data::unit">
+      <a href="../../Measure/Data/Unit.html">Unit</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="measure/Measure/Length" data-name="measure::length">
+      <a href="../../Measure/Length.html">Length</a>
+      
+        <ul>
+  
+  <li class=" " data-id="measure/Measure/Length/Unit" data-name="measure::length::unit">
+      <a href="../../Measure/Length/Unit.html">Unit</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="measure/Measure/Volume" data-name="measure::volume">
+      <a href="../../Measure/Volume.html">Volume</a>
+      
+        <ul>
+  
+  <li class=" " data-id="measure/Measure/Volume/Unit" data-name="measure::volume::unit">
+      <a href="../../Measure/Volume/Unit.html">Unit</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="measure/Measure/Weight" data-name="measure::weight">
+      <a href="../../Measure/Weight.html">Weight</a>
+      
+        <ul>
+  
+  <li class=" " data-id="measure/Measure/Weight/Unit" data-name="measure::weight::unit">
+      <a href="../../Measure/Weight/Unit.html">Unit</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="measure/Number" data-name="number">
+      <a href="../../Number.html">Number</a>
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">
+    enum
+  </span> Measure::<wbr>Data::<wbr>Unit
+
+</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L109" target="_blank">
+        data.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>
+      <a id="enum-members" class="anchor" href="#enum-members">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Enum Members
+    </h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="Bit">
+        <strong>Bit</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Bits">
+        <strong>Bits</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Byte">
+        <strong>Byte</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Bytes">
+        <strong>Bytes</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="B">
+        <strong>B</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Kilobyte">
+        <strong>Kilobyte</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Kilobytes">
+        <strong>Kilobytes</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="KB">
+        <strong>KB</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Megabyte">
+        <strong>Megabyte</strong> = <code><span class="n">3</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Megabytes">
+        <strong>Megabytes</strong> = <code><span class="n">3</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="MB">
+        <strong>MB</strong> = <code><span class="n">3</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Gigabyte">
+        <strong>Gigabyte</strong> = <code><span class="n">4</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Gigabytes">
+        <strong>Gigabytes</strong> = <code><span class="n">4</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="GB">
+        <strong>GB</strong> = <code><span class="n">4</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Terabyte">
+        <strong>Terabyte</strong> = <code><span class="n">5</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Terabytes">
+        <strong>Terabytes</strong> = <code><span class="n">5</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="TB">
+        <strong>TB</strong> = <code><span class="n">5</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Petabyte">
+        <strong>Petabyte</strong> = <code><span class="n">6</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Petabytes">
+        <strong>Petabytes</strong> = <code><span class="n">6</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="PB">
+        <strong>PB</strong> = <code><span class="n">6</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Kibibyte">
+        <strong>Kibibyte</strong> = <code><span class="n">7</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Kibibytes">
+        <strong>Kibibytes</strong> = <code><span class="n">7</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="KiB">
+        <strong>KiB</strong> = <code><span class="n">7</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Mibibyte">
+        <strong>Mibibyte</strong> = <code><span class="n">8</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Mibibytes">
+        <strong>Mibibytes</strong> = <code><span class="n">8</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="MiB">
+        <strong>MiB</strong> = <code><span class="n">8</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Gibibyte">
+        <strong>Gibibyte</strong> = <code><span class="n">9</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Gibibytes">
+        <strong>Gibibytes</strong> = <code><span class="n">9</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="GiB">
+        <strong>GiB</strong> = <code><span class="n">9</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Tibibyte">
+        <strong>Tibibyte</strong> = <code><span class="n">10</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Tibibytes">
+        <strong>Tibibytes</strong> = <code><span class="n">10</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="TiB">
+        <strong>TiB</strong> = <code><span class="n">10</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Pibibyte">
+        <strong>Pibibyte</strong> = <code><span class="n">11</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Pibibytes">
+        <strong>Pibibytes</strong> = <code><span class="n">11</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="PiB">
+        <strong>PiB</strong> = <code><span class="n">11</span></code>
+      </dt>
+      
+    
+  </dl>
+
+
+
+  
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#b%3F-instance-method" class="signature"><strong>#b?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#B">B</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#bit%3F-instance-method" class="signature"><strong>#bit?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Bit">Bit</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#bits%3F-instance-method" class="signature"><strong>#bits?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Bits">Bits</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#byte%3F-instance-method" class="signature"><strong>#byte?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Byte">Byte</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#bytes%3F-instance-method" class="signature"><strong>#bytes?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Bytes">Bytes</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#gb%3F-instance-method" class="signature"><strong>#gb?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#GB">GB</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#gi_b%3F-instance-method" class="signature"><strong>#gi_b?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#GiB">GiB</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#gibibyte%3F-instance-method" class="signature"><strong>#gibibyte?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Gibibyte">Gibibyte</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#gibibytes%3F-instance-method" class="signature"><strong>#gibibytes?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Gibibytes">Gibibytes</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#gigabyte%3F-instance-method" class="signature"><strong>#gigabyte?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Gigabyte">Gigabyte</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#gigabytes%3F-instance-method" class="signature"><strong>#gigabytes?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Gigabytes">Gigabytes</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#kb%3F-instance-method" class="signature"><strong>#kb?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#KB">KB</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ki_b%3F-instance-method" class="signature"><strong>#ki_b?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#KiB">KiB</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#kibibyte%3F-instance-method" class="signature"><strong>#kibibyte?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Kibibyte">Kibibyte</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#kibibytes%3F-instance-method" class="signature"><strong>#kibibytes?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Kibibytes">Kibibytes</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#kilobyte%3F-instance-method" class="signature"><strong>#kilobyte?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Kilobyte">Kilobyte</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#kilobytes%3F-instance-method" class="signature"><strong>#kilobytes?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Kilobytes">Kilobytes</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mb%3F-instance-method" class="signature"><strong>#mb?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#MB">MB</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#megabyte%3F-instance-method" class="signature"><strong>#megabyte?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Megabyte">Megabyte</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#megabytes%3F-instance-method" class="signature"><strong>#megabytes?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Megabytes">Megabytes</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mi_b%3F-instance-method" class="signature"><strong>#mi_b?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#MiB">MiB</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mibibyte%3F-instance-method" class="signature"><strong>#mibibyte?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Mibibyte">Mibibyte</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mibibytes%3F-instance-method" class="signature"><strong>#mibibytes?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Mibibytes">Mibibytes</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pb%3F-instance-method" class="signature"><strong>#pb?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#PB">PB</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#petabyte%3F-instance-method" class="signature"><strong>#petabyte?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Petabyte">Petabyte</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#petabytes%3F-instance-method" class="signature"><strong>#petabytes?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Petabytes">Petabytes</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pi_b%3F-instance-method" class="signature"><strong>#pi_b?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#PiB">PiB</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pibibyte%3F-instance-method" class="signature"><strong>#pibibyte?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Pibibyte">Pibibyte</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pibibytes%3F-instance-method" class="signature"><strong>#pibibytes?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Pibibytes">Pibibytes</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tb%3F-instance-method" class="signature"><strong>#tb?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#TB">TB</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#terabyte%3F-instance-method" class="signature"><strong>#terabyte?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Terabyte">Terabyte</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#terabytes%3F-instance-method" class="signature"><strong>#terabytes?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Terabytes">Terabytes</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ti_b%3F-instance-method" class="signature"><strong>#ti_b?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#TiB">TiB</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tibibyte%3F-instance-method" class="signature"><strong>#tibibyte?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Tibibyte">Tibibyte</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tibibytes%3F-instance-method" class="signature"><strong>#tibibytes?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Tibibytes">Tibibytes</a></code></p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <div class="methods-inherited">
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+  </div>
+
+  
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="b?-instance-method">
+      <div class="signature">
+        
+        def <strong>b?</strong>
+
+        <a class="method-permalink" href="#b%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#B">B</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L115" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="bit?-instance-method">
+      <div class="signature">
+        
+        def <strong>bit?</strong>
+
+        <a class="method-permalink" href="#bit%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Bit">Bit</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L110" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="bits?-instance-method">
+      <div class="signature">
+        
+        def <strong>bits?</strong>
+
+        <a class="method-permalink" href="#bits%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Bits">Bits</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L111" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="byte?-instance-method">
+      <div class="signature">
+        
+        def <strong>byte?</strong>
+
+        <a class="method-permalink" href="#byte%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Byte">Byte</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L113" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="bytes?-instance-method">
+      <div class="signature">
+        
+        def <strong>bytes?</strong>
+
+        <a class="method-permalink" href="#bytes%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Bytes">Bytes</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L114" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="gb?-instance-method">
+      <div class="signature">
+        
+        def <strong>gb?</strong>
+
+        <a class="method-permalink" href="#gb%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#GB">GB</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L127" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="gi_b?-instance-method">
+      <div class="signature">
+        
+        def <strong>gi_b?</strong>
+
+        <a class="method-permalink" href="#gi_b%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#GiB">GiB</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L147" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="gibibyte?-instance-method">
+      <div class="signature">
+        
+        def <strong>gibibyte?</strong>
+
+        <a class="method-permalink" href="#gibibyte%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Gibibyte">Gibibyte</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L145" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="gibibytes?-instance-method">
+      <div class="signature">
+        
+        def <strong>gibibytes?</strong>
+
+        <a class="method-permalink" href="#gibibytes%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Gibibytes">Gibibytes</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L146" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="gigabyte?-instance-method">
+      <div class="signature">
+        
+        def <strong>gigabyte?</strong>
+
+        <a class="method-permalink" href="#gigabyte%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Gigabyte">Gigabyte</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L125" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="gigabytes?-instance-method">
+      <div class="signature">
+        
+        def <strong>gigabytes?</strong>
+
+        <a class="method-permalink" href="#gigabytes%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Gigabytes">Gigabytes</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L126" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="kb?-instance-method">
+      <div class="signature">
+        
+        def <strong>kb?</strong>
+
+        <a class="method-permalink" href="#kb%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#KB">KB</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L119" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ki_b?-instance-method">
+      <div class="signature">
+        
+        def <strong>ki_b?</strong>
+
+        <a class="method-permalink" href="#ki_b%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#KiB">KiB</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L139" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="kibibyte?-instance-method">
+      <div class="signature">
+        
+        def <strong>kibibyte?</strong>
+
+        <a class="method-permalink" href="#kibibyte%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Kibibyte">Kibibyte</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L137" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="kibibytes?-instance-method">
+      <div class="signature">
+        
+        def <strong>kibibytes?</strong>
+
+        <a class="method-permalink" href="#kibibytes%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Kibibytes">Kibibytes</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L138" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="kilobyte?-instance-method">
+      <div class="signature">
+        
+        def <strong>kilobyte?</strong>
+
+        <a class="method-permalink" href="#kilobyte%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Kilobyte">Kilobyte</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L117" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="kilobytes?-instance-method">
+      <div class="signature">
+        
+        def <strong>kilobytes?</strong>
+
+        <a class="method-permalink" href="#kilobytes%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Kilobytes">Kilobytes</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L118" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mb?-instance-method">
+      <div class="signature">
+        
+        def <strong>mb?</strong>
+
+        <a class="method-permalink" href="#mb%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#MB">MB</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L123" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="megabyte?-instance-method">
+      <div class="signature">
+        
+        def <strong>megabyte?</strong>
+
+        <a class="method-permalink" href="#megabyte%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Megabyte">Megabyte</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L121" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="megabytes?-instance-method">
+      <div class="signature">
+        
+        def <strong>megabytes?</strong>
+
+        <a class="method-permalink" href="#megabytes%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Megabytes">Megabytes</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L122" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mi_b?-instance-method">
+      <div class="signature">
+        
+        def <strong>mi_b?</strong>
+
+        <a class="method-permalink" href="#mi_b%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#MiB">MiB</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L143" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mibibyte?-instance-method">
+      <div class="signature">
+        
+        def <strong>mibibyte?</strong>
+
+        <a class="method-permalink" href="#mibibyte%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Mibibyte">Mibibyte</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L141" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mibibytes?-instance-method">
+      <div class="signature">
+        
+        def <strong>mibibytes?</strong>
+
+        <a class="method-permalink" href="#mibibytes%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Mibibytes">Mibibytes</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L142" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pb?-instance-method">
+      <div class="signature">
+        
+        def <strong>pb?</strong>
+
+        <a class="method-permalink" href="#pb%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#PB">PB</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L135" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="petabyte?-instance-method">
+      <div class="signature">
+        
+        def <strong>petabyte?</strong>
+
+        <a class="method-permalink" href="#petabyte%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Petabyte">Petabyte</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L133" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="petabytes?-instance-method">
+      <div class="signature">
+        
+        def <strong>petabytes?</strong>
+
+        <a class="method-permalink" href="#petabytes%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Petabytes">Petabytes</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L134" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pi_b?-instance-method">
+      <div class="signature">
+        
+        def <strong>pi_b?</strong>
+
+        <a class="method-permalink" href="#pi_b%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#PiB">PiB</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L155" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pibibyte?-instance-method">
+      <div class="signature">
+        
+        def <strong>pibibyte?</strong>
+
+        <a class="method-permalink" href="#pibibyte%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Pibibyte">Pibibyte</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L153" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pibibytes?-instance-method">
+      <div class="signature">
+        
+        def <strong>pibibytes?</strong>
+
+        <a class="method-permalink" href="#pibibytes%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Pibibytes">Pibibytes</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L154" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tb?-instance-method">
+      <div class="signature">
+        
+        def <strong>tb?</strong>
+
+        <a class="method-permalink" href="#tb%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#TB">TB</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L131" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="terabyte?-instance-method">
+      <div class="signature">
+        
+        def <strong>terabyte?</strong>
+
+        <a class="method-permalink" href="#terabyte%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Terabyte">Terabyte</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L129" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="terabytes?-instance-method">
+      <div class="signature">
+        
+        def <strong>terabytes?</strong>
+
+        <a class="method-permalink" href="#terabytes%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Terabytes">Terabytes</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L130" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ti_b?-instance-method">
+      <div class="signature">
+        
+        def <strong>ti_b?</strong>
+
+        <a class="method-permalink" href="#ti_b%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#TiB">TiB</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L151" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tibibyte?-instance-method">
+      <div class="signature">
+        
+        def <strong>tibibyte?</strong>
+
+        <a class="method-permalink" href="#tibibyte%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Tibibyte">Tibibyte</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L149" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tibibytes?-instance-method">
+      <div class="signature">
+        
+        def <strong>tibibytes?</strong>
+
+        <a class="method-permalink" href="#tibibytes%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Data/Unit.html#Tibibytes">Tibibytes</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L150" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+</div>
+
+</body>
+</html>

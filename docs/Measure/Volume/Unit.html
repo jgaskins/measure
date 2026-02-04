@@ -1,0 +1,2344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.18.2">
+<meta name="crystal_docs.project_version" content="">
+<meta name="crystal_docs.project_name" content="measure">
+
+
+
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../js/doc.js"></script>
+
+  <meta name="repository-name" content="measure">
+  <title>Measure::Volume::Unit - measure </title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../../index.html">
+          measure
+        </a>
+      </h1>
+
+      <span class="project-version">
+        
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="measure/Measure" data-name="measure">
+      <a href="../../Measure.html">Measure</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="measure/Measure/Area" data-name="measure::area">
+      <a href="../../Measure/Area.html">Area</a>
+      
+        <ul>
+  
+  <li class=" " data-id="measure/Measure/Area/Unit" data-name="measure::area::unit">
+      <a href="../../Measure/Area/Unit.html">Unit</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="measure/Measure/Data" data-name="measure::data">
+      <a href="../../Measure/Data.html">Data</a>
+      
+        <ul>
+  
+  <li class=" " data-id="measure/Measure/Data/Unit" data-name="measure::data::unit">
+      <a href="../../Measure/Data/Unit.html">Unit</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="measure/Measure/Length" data-name="measure::length">
+      <a href="../../Measure/Length.html">Length</a>
+      
+        <ul>
+  
+  <li class=" " data-id="measure/Measure/Length/Unit" data-name="measure::length::unit">
+      <a href="../../Measure/Length/Unit.html">Unit</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent open current" data-id="measure/Measure/Volume" data-name="measure::volume">
+      <a href="../../Measure/Volume.html">Volume</a>
+      
+        <ul>
+  
+  <li class=" current" data-id="measure/Measure/Volume/Unit" data-name="measure::volume::unit">
+      <a href="../../Measure/Volume/Unit.html">Unit</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="measure/Measure/Weight" data-name="measure::weight">
+      <a href="../../Measure/Weight.html">Weight</a>
+      
+        <ul>
+  
+  <li class=" " data-id="measure/Measure/Weight/Unit" data-name="measure::weight::unit">
+      <a href="../../Measure/Weight/Unit.html">Unit</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="measure/Number" data-name="number">
+      <a href="../../Number.html">Number</a>
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">
+    enum
+  </span> Measure::<wbr>Volume::<wbr>Unit
+
+</h1>
+
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>The units available to <code><a href="../../Measure/Volume.html">Volume</a></code> instances. Note that there are multiple
+aliases of each one. This allows you to say <code>volume.to(:liters)</code> or
+<code>volume.to(:ml)</code>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L155" target="_blank">
+        volume.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>
+      <a id="enum-members" class="anchor" href="#enum-members">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Enum Members
+    </h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="Liter">
+        <strong>Liter</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Liters">
+        <strong>Liters</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="L">
+        <strong>L</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Milliliter">
+        <strong>Milliliter</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Milliliters">
+        <strong>Milliliters</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="ML">
+        <strong>ML</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Centiliter">
+        <strong>Centiliter</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Centiliters">
+        <strong>Centiliters</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="CL">
+        <strong>CL</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Kiloliter">
+        <strong>Kiloliter</strong> = <code><span class="n">3</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Kiloliters">
+        <strong>Kiloliters</strong> = <code><span class="n">3</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="KL">
+        <strong>KL</strong> = <code><span class="n">3</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="CubicMeter">
+        <strong>CubicMeter</strong> = <code><span class="n">4</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="CubicMeters">
+        <strong>CubicMeters</strong> = <code><span class="n">4</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="M3">
+        <strong>M3</strong> = <code><span class="n">4</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="CubicCentimeter">
+        <strong>CubicCentimeter</strong> = <code><span class="n">5</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="CubicCentimeters">
+        <strong>CubicCentimeters</strong> = <code><span class="n">5</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="CC">
+        <strong>CC</strong> = <code><span class="n">5</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="CM3">
+        <strong>CM3</strong> = <code><span class="n">5</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="CubicMillimeter">
+        <strong>CubicMillimeter</strong> = <code><span class="n">6</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="CubicMillimeters">
+        <strong>CubicMillimeters</strong> = <code><span class="n">6</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="MM3">
+        <strong>MM3</strong> = <code><span class="n">6</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="CubicMicrometer">
+        <strong>CubicMicrometer</strong> = <code><span class="n">7</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="CubicMicrometers">
+        <strong>CubicMicrometers</strong> = <code><span class="n">7</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="CubicMicron">
+        <strong>CubicMicron</strong> = <code><span class="n">7</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="CubicMicrons">
+        <strong>CubicMicrons</strong> = <code><span class="n">7</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="CubicNanometer">
+        <strong>CubicNanometer</strong> = <code><span class="n">8</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="CubicNanometers">
+        <strong>CubicNanometers</strong> = <code><span class="n">8</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="NM3">
+        <strong>NM3</strong> = <code><span class="n">8</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="CubicFoot">
+        <strong>CubicFoot</strong> = <code><span class="n">9</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="CubicFeet">
+        <strong>CubicFeet</strong> = <code><span class="n">9</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Ft3">
+        <strong>Ft3</strong> = <code><span class="n">9</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="CubicYard">
+        <strong>CubicYard</strong> = <code><span class="n">10</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="CubicYards">
+        <strong>CubicYards</strong> = <code><span class="n">10</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Yd3">
+        <strong>Yd3</strong> = <code><span class="n">10</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="CubicInch">
+        <strong>CubicInch</strong> = <code><span class="n">11</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="CubicInches">
+        <strong>CubicInches</strong> = <code><span class="n">11</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="In3">
+        <strong>In3</strong> = <code><span class="n">11</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="CubicMile">
+        <strong>CubicMile</strong> = <code><span class="n">12</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="CubicMiles">
+        <strong>CubicMiles</strong> = <code><span class="n">12</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Mi3">
+        <strong>Mi3</strong> = <code><span class="n">12</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Gallon">
+        <strong>Gallon</strong> = <code><span class="n">13</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Gallons">
+        <strong>Gallons</strong> = <code><span class="n">13</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Gal">
+        <strong>Gal</strong> = <code><span class="n">13</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Quart">
+        <strong>Quart</strong> = <code><span class="n">14</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Quarts">
+        <strong>Quarts</strong> = <code><span class="n">14</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Qt">
+        <strong>Qt</strong> = <code><span class="n">14</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Pint">
+        <strong>Pint</strong> = <code><span class="n">15</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Pints">
+        <strong>Pints</strong> = <code><span class="n">15</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Pt">
+        <strong>Pt</strong> = <code><span class="n">15</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Cup">
+        <strong>Cup</strong> = <code><span class="n">16</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Cups">
+        <strong>Cups</strong> = <code><span class="n">16</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="FluidOunce">
+        <strong>FluidOunce</strong> = <code><span class="n">17</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="FluidOunces">
+        <strong>FluidOunces</strong> = <code><span class="n">17</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="FlOz">
+        <strong>FlOz</strong> = <code><span class="n">17</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Tablespoon">
+        <strong>Tablespoon</strong> = <code><span class="n">18</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Tablespoons">
+        <strong>Tablespoons</strong> = <code><span class="n">18</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Tbsp">
+        <strong>Tbsp</strong> = <code><span class="n">18</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Teaspoon">
+        <strong>Teaspoon</strong> = <code><span class="n">19</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Teaspoons">
+        <strong>Teaspoons</strong> = <code><span class="n">19</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Tsp">
+        <strong>Tsp</strong> = <code><span class="n">19</span></code>
+      </dt>
+      
+    
+  </dl>
+
+
+
+  
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#cc%3F-instance-method" class="signature"><strong>#cc?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CC">CC</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#centiliter%3F-instance-method" class="signature"><strong>#centiliter?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Centiliter">Centiliter</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#centiliters%3F-instance-method" class="signature"><strong>#centiliters?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Centiliters">Centiliters</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cl%3F-instance-method" class="signature"><strong>#cl?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CL">CL</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cm3%3F-instance-method" class="signature"><strong>#cm3?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CM3">CM3</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_centimeter%3F-instance-method" class="signature"><strong>#cubic_centimeter?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicCentimeter">CubicCentimeter</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_centimeters%3F-instance-method" class="signature"><strong>#cubic_centimeters?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicCentimeters">CubicCentimeters</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_feet%3F-instance-method" class="signature"><strong>#cubic_feet?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicFeet">CubicFeet</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_foot%3F-instance-method" class="signature"><strong>#cubic_foot?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicFoot">CubicFoot</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_inch%3F-instance-method" class="signature"><strong>#cubic_inch?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicInch">CubicInch</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_inches%3F-instance-method" class="signature"><strong>#cubic_inches?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicInches">CubicInches</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_meter%3F-instance-method" class="signature"><strong>#cubic_meter?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicMeter">CubicMeter</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_meters%3F-instance-method" class="signature"><strong>#cubic_meters?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicMeters">CubicMeters</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_micrometer%3F-instance-method" class="signature"><strong>#cubic_micrometer?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicMicrometer">CubicMicrometer</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_micrometers%3F-instance-method" class="signature"><strong>#cubic_micrometers?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicMicrometers">CubicMicrometers</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_micron%3F-instance-method" class="signature"><strong>#cubic_micron?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicMicron">CubicMicron</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_microns%3F-instance-method" class="signature"><strong>#cubic_microns?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicMicrons">CubicMicrons</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_mile%3F-instance-method" class="signature"><strong>#cubic_mile?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicMile">CubicMile</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_miles%3F-instance-method" class="signature"><strong>#cubic_miles?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicMiles">CubicMiles</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_millimeter%3F-instance-method" class="signature"><strong>#cubic_millimeter?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicMillimeter">CubicMillimeter</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_millimeters%3F-instance-method" class="signature"><strong>#cubic_millimeters?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicMillimeters">CubicMillimeters</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_nanometer%3F-instance-method" class="signature"><strong>#cubic_nanometer?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicNanometer">CubicNanometer</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_nanometers%3F-instance-method" class="signature"><strong>#cubic_nanometers?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicNanometers">CubicNanometers</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_yard%3F-instance-method" class="signature"><strong>#cubic_yard?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicYard">CubicYard</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_yards%3F-instance-method" class="signature"><strong>#cubic_yards?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicYards">CubicYards</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cup%3F-instance-method" class="signature"><strong>#cup?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Cup">Cup</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cups%3F-instance-method" class="signature"><strong>#cups?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Cups">Cups</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#fl_oz%3F-instance-method" class="signature"><strong>#fl_oz?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#FlOz">FlOz</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#fluid_ounce%3F-instance-method" class="signature"><strong>#fluid_ounce?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#FluidOunce">FluidOunce</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#fluid_ounces%3F-instance-method" class="signature"><strong>#fluid_ounces?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#FluidOunces">FluidOunces</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ft3%3F-instance-method" class="signature"><strong>#ft3?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Ft3">Ft3</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#gal%3F-instance-method" class="signature"><strong>#gal?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Gal">Gal</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#gallon%3F-instance-method" class="signature"><strong>#gallon?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Gallon">Gallon</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#gallons%3F-instance-method" class="signature"><strong>#gallons?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Gallons">Gallons</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#in3%3F-instance-method" class="signature"><strong>#in3?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#In3">In3</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#kiloliter%3F-instance-method" class="signature"><strong>#kiloliter?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Kiloliter">Kiloliter</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#kiloliters%3F-instance-method" class="signature"><strong>#kiloliters?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Kiloliters">Kiloliters</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#kl%3F-instance-method" class="signature"><strong>#kl?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#KL">KL</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#l%3F-instance-method" class="signature"><strong>#l?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#L">L</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#liter%3F-instance-method" class="signature"><strong>#liter?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Liter">Liter</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#liters%3F-instance-method" class="signature"><strong>#liters?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Liters">Liters</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#m3%3F-instance-method" class="signature"><strong>#m3?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#M3">M3</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mi3%3F-instance-method" class="signature"><strong>#mi3?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Mi3">Mi3</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#milliliter%3F-instance-method" class="signature"><strong>#milliliter?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Milliliter">Milliliter</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#milliliters%3F-instance-method" class="signature"><strong>#milliliters?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Milliliters">Milliliters</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ml%3F-instance-method" class="signature"><strong>#ml?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#ML">ML</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mm3%3F-instance-method" class="signature"><strong>#mm3?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#MM3">MM3</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#nm3%3F-instance-method" class="signature"><strong>#nm3?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#NM3">NM3</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pint%3F-instance-method" class="signature"><strong>#pint?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Pint">Pint</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pints%3F-instance-method" class="signature"><strong>#pints?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Pints">Pints</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pt%3F-instance-method" class="signature"><strong>#pt?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Pt">Pt</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#qt%3F-instance-method" class="signature"><strong>#qt?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Qt">Qt</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#quart%3F-instance-method" class="signature"><strong>#quart?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Quart">Quart</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#quarts%3F-instance-method" class="signature"><strong>#quarts?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Quarts">Quarts</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tablespoon%3F-instance-method" class="signature"><strong>#tablespoon?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Tablespoon">Tablespoon</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tablespoons%3F-instance-method" class="signature"><strong>#tablespoons?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Tablespoons">Tablespoons</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tbsp%3F-instance-method" class="signature"><strong>#tbsp?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Tbsp">Tbsp</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#teaspoon%3F-instance-method" class="signature"><strong>#teaspoon?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Teaspoon">Teaspoon</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#teaspoons%3F-instance-method" class="signature"><strong>#teaspoons?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Teaspoons">Teaspoons</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tsp%3F-instance-method" class="signature"><strong>#tsp?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Tsp">Tsp</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#yd3%3F-instance-method" class="signature"><strong>#yd3?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Yd3">Yd3</a></code></p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <div class="methods-inherited">
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+  </div>
+
+  
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="cc?-instance-method">
+      <div class="signature">
+        
+        def <strong>cc?</strong>
+
+        <a class="method-permalink" href="#cc%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CC">CC</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L178" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="centiliter?-instance-method">
+      <div class="signature">
+        
+        def <strong>centiliter?</strong>
+
+        <a class="method-permalink" href="#centiliter%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Centiliter">Centiliter</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L164" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="centiliters?-instance-method">
+      <div class="signature">
+        
+        def <strong>centiliters?</strong>
+
+        <a class="method-permalink" href="#centiliters%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Centiliters">Centiliters</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L165" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cl?-instance-method">
+      <div class="signature">
+        
+        def <strong>cl?</strong>
+
+        <a class="method-permalink" href="#cl%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CL">CL</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L166" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cm3?-instance-method">
+      <div class="signature">
+        
+        def <strong>cm3?</strong>
+
+        <a class="method-permalink" href="#cm3%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CM3">CM3</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L179" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_centimeter?-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_centimeter?</strong>
+
+        <a class="method-permalink" href="#cubic_centimeter%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicCentimeter">CubicCentimeter</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L176" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_centimeters?-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_centimeters?</strong>
+
+        <a class="method-permalink" href="#cubic_centimeters%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicCentimeters">CubicCentimeters</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L177" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_feet?-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_feet?</strong>
+
+        <a class="method-permalink" href="#cubic_feet%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicFeet">CubicFeet</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L195" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_foot?-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_foot?</strong>
+
+        <a class="method-permalink" href="#cubic_foot%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicFoot">CubicFoot</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L194" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_inch?-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_inch?</strong>
+
+        <a class="method-permalink" href="#cubic_inch%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicInch">CubicInch</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L202" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_inches?-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_inches?</strong>
+
+        <a class="method-permalink" href="#cubic_inches%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicInches">CubicInches</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L203" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_meter?-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_meter?</strong>
+
+        <a class="method-permalink" href="#cubic_meter%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicMeter">CubicMeter</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L172" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_meters?-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_meters?</strong>
+
+        <a class="method-permalink" href="#cubic_meters%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicMeters">CubicMeters</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L173" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_micrometer?-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_micrometer?</strong>
+
+        <a class="method-permalink" href="#cubic_micrometer%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicMicrometer">CubicMicrometer</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L185" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_micrometers?-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_micrometers?</strong>
+
+        <a class="method-permalink" href="#cubic_micrometers%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicMicrometers">CubicMicrometers</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L186" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_micron?-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_micron?</strong>
+
+        <a class="method-permalink" href="#cubic_micron%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicMicron">CubicMicron</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L187" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_microns?-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_microns?</strong>
+
+        <a class="method-permalink" href="#cubic_microns%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicMicrons">CubicMicrons</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L188" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_mile?-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_mile?</strong>
+
+        <a class="method-permalink" href="#cubic_mile%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicMile">CubicMile</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L206" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_miles?-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_miles?</strong>
+
+        <a class="method-permalink" href="#cubic_miles%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicMiles">CubicMiles</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L207" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_millimeter?-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_millimeter?</strong>
+
+        <a class="method-permalink" href="#cubic_millimeter%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicMillimeter">CubicMillimeter</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L181" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_millimeters?-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_millimeters?</strong>
+
+        <a class="method-permalink" href="#cubic_millimeters%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicMillimeters">CubicMillimeters</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L182" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_nanometer?-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_nanometer?</strong>
+
+        <a class="method-permalink" href="#cubic_nanometer%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicNanometer">CubicNanometer</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L190" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_nanometers?-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_nanometers?</strong>
+
+        <a class="method-permalink" href="#cubic_nanometers%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicNanometers">CubicNanometers</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L191" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_yard?-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_yard?</strong>
+
+        <a class="method-permalink" href="#cubic_yard%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicYard">CubicYard</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L198" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_yards?-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_yards?</strong>
+
+        <a class="method-permalink" href="#cubic_yards%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#CubicYards">CubicYards</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L199" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cup?-instance-method">
+      <div class="signature">
+        
+        def <strong>cup?</strong>
+
+        <a class="method-permalink" href="#cup%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Cup">Cup</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L222" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cups?-instance-method">
+      <div class="signature">
+        
+        def <strong>cups?</strong>
+
+        <a class="method-permalink" href="#cups%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Cups">Cups</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L223" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="fl_oz?-instance-method">
+      <div class="signature">
+        
+        def <strong>fl_oz?</strong>
+
+        <a class="method-permalink" href="#fl_oz%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#FlOz">FlOz</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L227" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="fluid_ounce?-instance-method">
+      <div class="signature">
+        
+        def <strong>fluid_ounce?</strong>
+
+        <a class="method-permalink" href="#fluid_ounce%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#FluidOunce">FluidOunce</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L225" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="fluid_ounces?-instance-method">
+      <div class="signature">
+        
+        def <strong>fluid_ounces?</strong>
+
+        <a class="method-permalink" href="#fluid_ounces%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#FluidOunces">FluidOunces</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L226" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ft3?-instance-method">
+      <div class="signature">
+        
+        def <strong>ft3?</strong>
+
+        <a class="method-permalink" href="#ft3%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Ft3">Ft3</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L196" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="gal?-instance-method">
+      <div class="signature">
+        
+        def <strong>gal?</strong>
+
+        <a class="method-permalink" href="#gal%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Gal">Gal</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L212" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="gallon?-instance-method">
+      <div class="signature">
+        
+        def <strong>gallon?</strong>
+
+        <a class="method-permalink" href="#gallon%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Gallon">Gallon</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L210" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="gallons?-instance-method">
+      <div class="signature">
+        
+        def <strong>gallons?</strong>
+
+        <a class="method-permalink" href="#gallons%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Gallons">Gallons</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L211" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="in3?-instance-method">
+      <div class="signature">
+        
+        def <strong>in3?</strong>
+
+        <a class="method-permalink" href="#in3%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#In3">In3</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L204" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="kiloliter?-instance-method">
+      <div class="signature">
+        
+        def <strong>kiloliter?</strong>
+
+        <a class="method-permalink" href="#kiloliter%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Kiloliter">Kiloliter</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L168" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="kiloliters?-instance-method">
+      <div class="signature">
+        
+        def <strong>kiloliters?</strong>
+
+        <a class="method-permalink" href="#kiloliters%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Kiloliters">Kiloliters</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L169" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="kl?-instance-method">
+      <div class="signature">
+        
+        def <strong>kl?</strong>
+
+        <a class="method-permalink" href="#kl%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#KL">KL</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L170" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="l?-instance-method">
+      <div class="signature">
+        
+        def <strong>l?</strong>
+
+        <a class="method-permalink" href="#l%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#L">L</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L158" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="liter?-instance-method">
+      <div class="signature">
+        
+        def <strong>liter?</strong>
+
+        <a class="method-permalink" href="#liter%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Liter">Liter</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L156" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="liters?-instance-method">
+      <div class="signature">
+        
+        def <strong>liters?</strong>
+
+        <a class="method-permalink" href="#liters%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Liters">Liters</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L157" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="m3?-instance-method">
+      <div class="signature">
+        
+        def <strong>m3?</strong>
+
+        <a class="method-permalink" href="#m3%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#M3">M3</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L174" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mi3?-instance-method">
+      <div class="signature">
+        
+        def <strong>mi3?</strong>
+
+        <a class="method-permalink" href="#mi3%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Mi3">Mi3</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L208" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="milliliter?-instance-method">
+      <div class="signature">
+        
+        def <strong>milliliter?</strong>
+
+        <a class="method-permalink" href="#milliliter%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Milliliter">Milliliter</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L160" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="milliliters?-instance-method">
+      <div class="signature">
+        
+        def <strong>milliliters?</strong>
+
+        <a class="method-permalink" href="#milliliters%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Milliliters">Milliliters</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L161" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ml?-instance-method">
+      <div class="signature">
+        
+        def <strong>ml?</strong>
+
+        <a class="method-permalink" href="#ml%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#ML">ML</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L162" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mm3?-instance-method">
+      <div class="signature">
+        
+        def <strong>mm3?</strong>
+
+        <a class="method-permalink" href="#mm3%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#MM3">MM3</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L183" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="nm3?-instance-method">
+      <div class="signature">
+        
+        def <strong>nm3?</strong>
+
+        <a class="method-permalink" href="#nm3%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#NM3">NM3</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L192" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pint?-instance-method">
+      <div class="signature">
+        
+        def <strong>pint?</strong>
+
+        <a class="method-permalink" href="#pint%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Pint">Pint</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L218" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pints?-instance-method">
+      <div class="signature">
+        
+        def <strong>pints?</strong>
+
+        <a class="method-permalink" href="#pints%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Pints">Pints</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L219" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pt?-instance-method">
+      <div class="signature">
+        
+        def <strong>pt?</strong>
+
+        <a class="method-permalink" href="#pt%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Pt">Pt</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L220" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="qt?-instance-method">
+      <div class="signature">
+        
+        def <strong>qt?</strong>
+
+        <a class="method-permalink" href="#qt%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Qt">Qt</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L216" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="quart?-instance-method">
+      <div class="signature">
+        
+        def <strong>quart?</strong>
+
+        <a class="method-permalink" href="#quart%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Quart">Quart</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L214" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="quarts?-instance-method">
+      <div class="signature">
+        
+        def <strong>quarts?</strong>
+
+        <a class="method-permalink" href="#quarts%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Quarts">Quarts</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L215" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tablespoon?-instance-method">
+      <div class="signature">
+        
+        def <strong>tablespoon?</strong>
+
+        <a class="method-permalink" href="#tablespoon%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Tablespoon">Tablespoon</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L229" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tablespoons?-instance-method">
+      <div class="signature">
+        
+        def <strong>tablespoons?</strong>
+
+        <a class="method-permalink" href="#tablespoons%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Tablespoons">Tablespoons</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L230" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tbsp?-instance-method">
+      <div class="signature">
+        
+        def <strong>tbsp?</strong>
+
+        <a class="method-permalink" href="#tbsp%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Tbsp">Tbsp</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L231" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="teaspoon?-instance-method">
+      <div class="signature">
+        
+        def <strong>teaspoon?</strong>
+
+        <a class="method-permalink" href="#teaspoon%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Teaspoon">Teaspoon</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L233" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="teaspoons?-instance-method">
+      <div class="signature">
+        
+        def <strong>teaspoons?</strong>
+
+        <a class="method-permalink" href="#teaspoons%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Teaspoons">Teaspoons</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L234" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tsp?-instance-method">
+      <div class="signature">
+        
+        def <strong>tsp?</strong>
+
+        <a class="method-permalink" href="#tsp%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Tsp">Tsp</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L235" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="yd3?-instance-method">
+      <div class="signature">
+        
+        def <strong>yd3?</strong>
+
+        <a class="method-permalink" href="#yd3%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Volume/Unit.html#Yd3">Yd3</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L200" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+</div>
+
+</body>
+</html>

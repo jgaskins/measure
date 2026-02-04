@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Crystal Docs 1.10.1">
-<meta name="crystal_docs.project_version" content="main">
+<meta name="generator" content="Crystal Docs 1.18.2">
+<meta name="crystal_docs.project_version" content="">
 <meta name="crystal_docs.project_name" content="measure">
 
 
@@ -14,7 +14,7 @@
 <script type="text/javascript" src="js/doc.js"></script>
 
   <meta name="repository-name" content="measure">
-  <title>Number - measure main</title>
+  <title>Number - measure </title>
   <script type="text/javascript">
     CrystalDocs.base_path = "";
   </script>
@@ -45,7 +45,7 @@
       </h1>
 
       <span class="project-version">
-        main
+        
       </span>
     </div>
   </div>
@@ -62,6 +62,36 @@
       
         <ul>
   
+  <li class="parent " data-id="measure/Measure/Area" data-name="measure::area">
+      <a href="Measure/Area.html">Area</a>
+      
+        <ul>
+  
+  <li class=" " data-id="measure/Measure/Area/Unit" data-name="measure::area::unit">
+      <a href="Measure/Area/Unit.html">Unit</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="measure/Measure/Data" data-name="measure::data">
+      <a href="Measure/Data.html">Data</a>
+      
+        <ul>
+  
+  <li class=" " data-id="measure/Measure/Data/Unit" data-name="measure::data::unit">
+      <a href="Measure/Data/Unit.html">Unit</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
   <li class="parent " data-id="measure/Measure/Length" data-name="measure::length">
       <a href="Measure/Length.html">Length</a>
       
@@ -69,6 +99,21 @@
   
   <li class=" " data-id="measure/Measure/Length/Unit" data-name="measure::length::unit">
       <a href="Measure/Length/Unit.html">Unit</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="measure/Measure/Volume" data-name="measure::volume">
+      <a href="Measure/Volume.html">Volume</a>
+      
+        <ul>
+  
+  <li class=" " data-id="measure/Measure/Volume/Unit" data-name="measure::volume::unit">
+      <a href="Measure/Volume/Unit.html">Unit</a>
       
     </li>
   
@@ -111,7 +156,9 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">abstract struct</span> Number
+  <span class="kind">
+    abstract struct
+  </span> Number
 
 </h1>
 
@@ -131,6 +178,8 @@
   </h2>
 
   <p>The top-level number type.</p>
+
+
 
 
 
@@ -171,14 +220,35 @@
   </h2>
   
     
-      <a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L182" target="_blank">
+      <a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L237" target="_blank">
+        area.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L159" target="_blank">
+        data.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L235" target="_blank">
         length.cr
       </a>
     
     <br/>
   
     
-      <a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L155" target="_blank">
+      <a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L240" target="_blank">
+        volume.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/jgaskins/measure/blob/v/src/weight.cr#L157" target="_blank">
         weight.cr
       </a>
     
@@ -189,12 +259,13 @@
 
 
 
+  
 
+  
 
+  
 
-
-
-
+  
   <h2>
     <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
   <svg class="octicon-link" aria-hidden="true">
@@ -204,6 +275,66 @@
     Instance Method Summary
   </h2>
   <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#acre-instance-method" class="signature"><strong>#acre</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> acre</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#acres-instance-method" class="signature"><strong>#acres</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> acres</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#b-instance-method" class="signature"><strong>#b</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#bit-instance-method" class="signature"><strong>#bit</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#bits-instance-method" class="signature"><strong>#bits</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#byte-instance-method" class="signature"><strong>#byte</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#bytes-instance-method" class="signature"><strong>#bytes</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cc-instance-method" class="signature"><strong>#cc</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cc</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#centiliter-instance-method" class="signature"><strong>#centiliter</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> centiliter</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#centiliters-instance-method" class="signature"><strong>#centiliters</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> centiliters</p></div>
+        
+      </li>
     
       <li class="entry-summary">
         <a href="#centimeter-instance-method" class="signature"><strong>#centimeter</strong></a>
@@ -220,6 +351,13 @@
       </li>
     
       <li class="entry-summary">
+        <a href="#cl-instance-method" class="signature"><strong>#cl</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cl</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#cm-instance-method" class="signature"><strong>#cm</strong></a>
         
           <div class="summary"><p>Instantiate a <code><a href="Measure/Length.html">Measure::Length</a></code> of <code>self</code> cm</p></div>
@@ -227,9 +365,198 @@
       </li>
     
       <li class="entry-summary">
+        <a href="#cm2-instance-method" class="signature"><strong>#cm2</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> cm2</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cm3-instance-method" class="signature"><strong>#cm3</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cm3</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_centimeter-instance-method" class="signature"><strong>#cubic_centimeter</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubiccentimeter</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_centimeters-instance-method" class="signature"><strong>#cubic_centimeters</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubiccentimeters</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_feet-instance-method" class="signature"><strong>#cubic_feet</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicfeet</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_foot-instance-method" class="signature"><strong>#cubic_foot</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicfoot</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_inch-instance-method" class="signature"><strong>#cubic_inch</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicinch</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_inches-instance-method" class="signature"><strong>#cubic_inches</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicinches</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_meter-instance-method" class="signature"><strong>#cubic_meter</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicmeter</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_meters-instance-method" class="signature"><strong>#cubic_meters</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicmeters</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_micrometer-instance-method" class="signature"><strong>#cubic_micrometer</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicmicrometer</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_micrometers-instance-method" class="signature"><strong>#cubic_micrometers</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicmicrometers</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_micron-instance-method" class="signature"><strong>#cubic_micron</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicmicron</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_microns-instance-method" class="signature"><strong>#cubic_microns</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicmicrons</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_mile-instance-method" class="signature"><strong>#cubic_mile</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicmile</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_miles-instance-method" class="signature"><strong>#cubic_miles</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicmiles</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_millimeter-instance-method" class="signature"><strong>#cubic_millimeter</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicmillimeter</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_millimeters-instance-method" class="signature"><strong>#cubic_millimeters</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicmillimeters</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_nanometer-instance-method" class="signature"><strong>#cubic_nanometer</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicnanometer</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_nanometers-instance-method" class="signature"><strong>#cubic_nanometers</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicnanometers</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_yard-instance-method" class="signature"><strong>#cubic_yard</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicyard</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cubic_yards-instance-method" class="signature"><strong>#cubic_yards</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicyards</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cup-instance-method" class="signature"><strong>#cup</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cup</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cups-instance-method" class="signature"><strong>#cups</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cups</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#feet-instance-method" class="signature"><strong>#feet</strong></a>
         
           <div class="summary"><p>Instantiate a <code><a href="Measure/Length.html">Measure::Length</a></code> of <code>self</code> feet</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#fl_oz-instance-method" class="signature"><strong>#fl_oz</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> floz</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#fluid_ounce-instance-method" class="signature"><strong>#fluid_ounce</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> fluidounce</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#fluid_ounces-instance-method" class="signature"><strong>#fluid_ounces</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> fluidounces</p></div>
         
       </li>
     
@@ -248,7 +575,72 @@
       </li>
     
       <li class="entry-summary">
+        <a href="#ft2-instance-method" class="signature"><strong>#ft2</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> ft2</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ft3-instance-method" class="signature"><strong>#ft3</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> ft3</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#g-instance-method" class="signature"><strong>#g</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#gal-instance-method" class="signature"><strong>#gal</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> gal</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#gallon-instance-method" class="signature"><strong>#gallon</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> gallon</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#gallons-instance-method" class="signature"><strong>#gallons</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> gallons</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#gb-instance-method" class="signature"><strong>#gb</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#gib-instance-method" class="signature"><strong>#gib</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#gibibyte-instance-method" class="signature"><strong>#gibibyte</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#gibibytes-instance-method" class="signature"><strong>#gibibytes</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#gigabyte-instance-method" class="signature"><strong>#gigabyte</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#gigabytes-instance-method" class="signature"><strong>#gigabytes</strong></a>
         
       </li>
     
@@ -263,9 +655,44 @@
       </li>
     
       <li class="entry-summary">
+        <a href="#ha-instance-method" class="signature"><strong>#ha</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> ha</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#hectare-instance-method" class="signature"><strong>#hectare</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> hectare</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#hectares-instance-method" class="signature"><strong>#hectares</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> hectares</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#in-instance-method" class="signature"><strong>#in</strong></a>
         
           <div class="summary"><p>Instantiate a <code><a href="Measure/Length.html">Measure::Length</a></code> of <code>self</code> in</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#in2-instance-method" class="signature"><strong>#in2</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> in2</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#in3-instance-method" class="signature"><strong>#in3</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> in3</p></div>
         
       </li>
     
@@ -284,7 +711,37 @@
       </li>
     
       <li class="entry-summary">
+        <a href="#kb-instance-method" class="signature"><strong>#kb</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#kg-instance-method" class="signature"><strong>#kg</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#kib-instance-method" class="signature"><strong>#kib</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#kibibyte-instance-method" class="signature"><strong>#kibibyte</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#kibibytes-instance-method" class="signature"><strong>#kibibytes</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#kilobyte-instance-method" class="signature"><strong>#kilobyte</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#kilobytes-instance-method" class="signature"><strong>#kilobytes</strong></a>
         
       </li>
     
@@ -295,6 +752,20 @@
     
       <li class="entry-summary">
         <a href="#kilograms-instance-method" class="signature"><strong>#kilograms</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#kiloliter-instance-method" class="signature"><strong>#kiloliter</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> kiloliter</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#kiloliters-instance-method" class="signature"><strong>#kiloliters</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> kiloliters</p></div>
         
       </li>
     
@@ -313,9 +784,30 @@
       </li>
     
       <li class="entry-summary">
+        <a href="#kl-instance-method" class="signature"><strong>#kl</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> kl</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#km-instance-method" class="signature"><strong>#km</strong></a>
         
           <div class="summary"><p>Instantiate a <code><a href="Measure/Length.html">Measure::Length</a></code> of <code>self</code> km</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#km2-instance-method" class="signature"><strong>#km2</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> km2</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#l-instance-method" class="signature"><strong>#l</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> l</p></div>
         
       </li>
     
@@ -326,6 +818,49 @@
     
       <li class="entry-summary">
         <a href="#lbs-instance-method" class="signature"><strong>#lbs</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#liter-instance-method" class="signature"><strong>#liter</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> liter</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#liters-instance-method" class="signature"><strong>#liters</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> liters</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#m2-instance-method" class="signature"><strong>#m2</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> m2</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#m3-instance-method" class="signature"><strong>#m3</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> m3</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mb-instance-method" class="signature"><strong>#mb</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#megabyte-instance-method" class="signature"><strong>#megabyte</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#megabytes-instance-method" class="signature"><strong>#megabytes</strong></a>
         
       </li>
     
@@ -352,6 +887,35 @@
         <a href="#mi-instance-method" class="signature"><strong>#mi</strong></a>
         
           <div class="summary"><p>Instantiate a <code><a href="Measure/Length.html">Measure::Length</a></code> of <code>self</code> mi</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mi2-instance-method" class="signature"><strong>#mi2</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> mi2</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mi3-instance-method" class="signature"><strong>#mi3</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> mi3</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mib-instance-method" class="signature"><strong>#mib</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mibibyte-instance-method" class="signature"><strong>#mibibyte</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mibibytes-instance-method" class="signature"><strong>#mibibytes</strong></a>
         
       </li>
     
@@ -408,6 +972,20 @@
       </li>
     
       <li class="entry-summary">
+        <a href="#milliliter-instance-method" class="signature"><strong>#milliliter</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> milliliter</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#milliliters-instance-method" class="signature"><strong>#milliliters</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> milliliters</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#millimeter-instance-method" class="signature"><strong>#millimeter</strong></a>
         
           <div class="summary"><p>Instantiate a <code><a href="Measure/Length.html">Measure::Length</a></code> of <code>self</code> millimeter</p></div>
@@ -422,9 +1000,30 @@
       </li>
     
       <li class="entry-summary">
+        <a href="#ml-instance-method" class="signature"><strong>#ml</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> ml</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#mm-instance-method" class="signature"><strong>#mm</strong></a>
         
           <div class="summary"><p>Instantiate a <code><a href="Measure/Length.html">Measure::Length</a></code> of <code>self</code> mm</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mm2-instance-method" class="signature"><strong>#mm2</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> mm2</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mm3-instance-method" class="signature"><strong>#mm3</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> mm3</p></div>
         
       </li>
     
@@ -450,6 +1049,20 @@
       </li>
     
       <li class="entry-summary">
+        <a href="#nm2-instance-method" class="signature"><strong>#nm2</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> nm2</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#nm3-instance-method" class="signature"><strong>#nm3</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> nm3</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#ounce-instance-method" class="signature"><strong>#ounce</strong></a>
         
       </li>
@@ -465,6 +1078,50 @@
       </li>
     
       <li class="entry-summary">
+        <a href="#pb-instance-method" class="signature"><strong>#pb</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#petabyte-instance-method" class="signature"><strong>#petabyte</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#petabytes-instance-method" class="signature"><strong>#petabytes</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pib-instance-method" class="signature"><strong>#pib</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pibibyte-instance-method" class="signature"><strong>#pibibyte</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pibibytes-instance-method" class="signature"><strong>#pibibytes</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pint-instance-method" class="signature"><strong>#pint</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> pint</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pints-instance-method" class="signature"><strong>#pints</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> pints</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#pound-instance-method" class="signature"><strong>#pound</strong></a>
         
       </li>
@@ -475,7 +1132,303 @@
       </li>
     
       <li class="entry-summary">
+        <a href="#pt-instance-method" class="signature"><strong>#pt</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> pt</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#qt-instance-method" class="signature"><strong>#qt</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> qt</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#quart-instance-method" class="signature"><strong>#quart</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> quart</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#quarts-instance-method" class="signature"><strong>#quarts</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> quarts</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#sq_cm-instance-method" class="signature"><strong>#sq_cm</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> sq_cm</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#sq_ft-instance-method" class="signature"><strong>#sq_ft</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> sq_ft</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#sq_in-instance-method" class="signature"><strong>#sq_in</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> sq_in</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#sq_km-instance-method" class="signature"><strong>#sq_km</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> sq_km</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#sq_m-instance-method" class="signature"><strong>#sq_m</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> sq_m</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#sq_mi-instance-method" class="signature"><strong>#sq_mi</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> sq_mi</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#sq_mm-instance-method" class="signature"><strong>#sq_mm</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> sq_mm</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#sq_nm-instance-method" class="signature"><strong>#sq_nm</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> sq_nm</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#sq_yd-instance-method" class="signature"><strong>#sq_yd</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> sq_yd</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_centimeter-instance-method" class="signature"><strong>#square_centimeter</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_centimeter</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_centimeters-instance-method" class="signature"><strong>#square_centimeters</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_centimeters</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_feet-instance-method" class="signature"><strong>#square_feet</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_feet</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_foot-instance-method" class="signature"><strong>#square_foot</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_foot</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_inch-instance-method" class="signature"><strong>#square_inch</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_inch</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_inches-instance-method" class="signature"><strong>#square_inches</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_inches</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_kilometer-instance-method" class="signature"><strong>#square_kilometer</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_kilometer</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_kilometers-instance-method" class="signature"><strong>#square_kilometers</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_kilometers</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_meter-instance-method" class="signature"><strong>#square_meter</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_meter</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_meters-instance-method" class="signature"><strong>#square_meters</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_meters</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_micrometer-instance-method" class="signature"><strong>#square_micrometer</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_micrometer</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_micrometers-instance-method" class="signature"><strong>#square_micrometers</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_micrometers</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_mile-instance-method" class="signature"><strong>#square_mile</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_mile</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_miles-instance-method" class="signature"><strong>#square_miles</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_miles</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_millimeter-instance-method" class="signature"><strong>#square_millimeter</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_millimeter</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_millimeters-instance-method" class="signature"><strong>#square_millimeters</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_millimeters</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_nanometer-instance-method" class="signature"><strong>#square_nanometer</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_nanometer</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_nanometers-instance-method" class="signature"><strong>#square_nanometers</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_nanometers</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_yard-instance-method" class="signature"><strong>#square_yard</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_yard</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_yards-instance-method" class="signature"><strong>#square_yards</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_yards</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#t-instance-method" class="signature"><strong>#t</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tablespoon-instance-method" class="signature"><strong>#tablespoon</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> tablespoon</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tablespoons-instance-method" class="signature"><strong>#tablespoons</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> tablespoons</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tb-instance-method" class="signature"><strong>#tb</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tbsp-instance-method" class="signature"><strong>#tbsp</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> tbsp</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#teaspoon-instance-method" class="signature"><strong>#teaspoon</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> teaspoon</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#teaspoons-instance-method" class="signature"><strong>#teaspoons</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> teaspoons</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#terabyte-instance-method" class="signature"><strong>#terabyte</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#terabytes-instance-method" class="signature"><strong>#terabytes</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tib-instance-method" class="signature"><strong>#tib</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tibibyte-instance-method" class="signature"><strong>#tibibyte</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tibibytes-instance-method" class="signature"><strong>#tibibytes</strong></a>
         
       </li>
     
@@ -486,6 +1439,13 @@
     
       <li class="entry-summary">
         <a href="#tons-instance-method" class="signature"><strong>#tons</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tsp-instance-method" class="signature"><strong>#tsp</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> tsp</p></div>
         
       </li>
     
@@ -511,6 +1471,20 @@
       </li>
     
       <li class="entry-summary">
+        <a href="#yd2-instance-method" class="signature"><strong>#yd2</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> yd2</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#yd3-instance-method" class="signature"><strong>#yd3</strong></a>
+        
+          <div class="summary"><p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> yd3</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#yds-instance-method" class="signature"><strong>#yds</strong></a>
         
           <div class="summary"><p>Instantiate a <code><a href="Measure/Length.html">Measure::Length</a></code> of <code>self</code> yds</p></div>
@@ -521,69 +1495,69 @@
 
 
 
-<div class="methods-inherited">
+  <div class="methods-inherited">
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+  </div>
+
   
-    
-
-
-    
-
-
-    
-
-
-    
-
 
   
-    
-
-
-    
-
-
-    
-
-
-    
-
 
   
-    
-
-
-    
-
-
-    
-
-
-    
-
 
   
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-  
-</div>
-
-
-
-
-
-
-
-
   <h2>
     <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
   <svg class="octicon-link" aria-hidden="true">
@@ -592,6 +1566,201 @@
 </a>
     Instance Method Detail
   </h2>
+  
+    <div class="entry-detail" id="acre-instance-method">
+      <div class="signature">
+        
+        def <strong>acre</strong>
+
+        <a class="method-permalink" href="#acre-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> acre</p>
+<pre><code class="language-crystal"><span class="n">1</span>.acre
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::Acre)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="acres-instance-method">
+      <div class="signature">
+        
+        def <strong>acres</strong>
+
+        <a class="method-permalink" href="#acres-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> acres</p>
+<pre><code class="language-crystal"><span class="n">1</span>.acres
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::Acres)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="b-instance-method">
+      <div class="signature">
+        
+        def <strong>b</strong>
+
+        <a class="method-permalink" href="#b-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L160" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="bit-instance-method">
+      <div class="signature">
+        
+        def <strong>bit</strong>
+
+        <a class="method-permalink" href="#bit-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L160" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="bits-instance-method">
+      <div class="signature">
+        
+        def <strong>bits</strong>
+
+        <a class="method-permalink" href="#bits-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L160" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="byte-instance-method">
+      <div class="signature">
+        
+        def <strong>byte</strong>
+
+        <a class="method-permalink" href="#byte-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L160" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="bytes-instance-method">
+      <div class="signature">
+        
+        def <strong>bytes</strong>
+
+        <a class="method-permalink" href="#bytes-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L160" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cc-instance-method">
+      <div class="signature">
+        
+        def <strong>cc</strong>
+
+        <a class="method-permalink" href="#cc-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cc</p>
+<pre><code class="language-crystal"><span class="n">1</span>.cc
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::CC)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="centiliter-instance-method">
+      <div class="signature">
+        
+        def <strong>centiliter</strong>
+
+        <a class="method-permalink" href="#centiliter-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> centiliter</p>
+<pre><code class="language-crystal"><span class="n">1</span>.centiliter
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::Centiliter)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="centiliters-instance-method">
+      <div class="signature">
+        
+        def <strong>centiliters</strong>
+
+        <a class="method-permalink" href="#centiliters-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> centiliters</p>
+<pre><code class="language-crystal"><span class="n">1</span>.centiliters
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::Centiliters)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
   
     <div class="entry-detail" id="centimeter-instance-method">
       <div class="signature">
@@ -611,7 +1780,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L183" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L236" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -634,7 +1803,30 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L183" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L236" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cl-instance-method">
+      <div class="signature">
+        
+        def <strong>cl</strong>
+
+        <a class="method-permalink" href="#cl-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cl</p>
+<pre><code class="language-crystal"><span class="n">1</span>.cl
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::CL)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -657,7 +1849,559 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L183" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L236" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cm2-instance-method">
+      <div class="signature">
+        
+        def <strong>cm2</strong>
+
+        <a class="method-permalink" href="#cm2-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> cm2</p>
+<pre><code class="language-crystal"><span class="n">1</span>.cm2
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::CM2)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cm3-instance-method">
+      <div class="signature">
+        
+        def <strong>cm3</strong>
+
+        <a class="method-permalink" href="#cm3-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cm3</p>
+<pre><code class="language-crystal"><span class="n">1</span>.cm3
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::CM3)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_centimeter-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_centimeter</strong>
+
+        <a class="method-permalink" href="#cubic_centimeter-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubiccentimeter</p>
+<pre><code class="language-crystal"><span class="n">1</span>.cubic_centimeter
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::CubicCentimeter)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_centimeters-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_centimeters</strong>
+
+        <a class="method-permalink" href="#cubic_centimeters-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubiccentimeters</p>
+<pre><code class="language-crystal"><span class="n">1</span>.cubic_centimeters
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::CubicCentimeters)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_feet-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_feet</strong>
+
+        <a class="method-permalink" href="#cubic_feet-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicfeet</p>
+<pre><code class="language-crystal"><span class="n">1</span>.cubic_feet
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::CubicFeet)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_foot-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_foot</strong>
+
+        <a class="method-permalink" href="#cubic_foot-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicfoot</p>
+<pre><code class="language-crystal"><span class="n">1</span>.cubic_foot
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::CubicFoot)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_inch-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_inch</strong>
+
+        <a class="method-permalink" href="#cubic_inch-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicinch</p>
+<pre><code class="language-crystal"><span class="n">1</span>.cubic_inch
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::CubicInch)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_inches-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_inches</strong>
+
+        <a class="method-permalink" href="#cubic_inches-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicinches</p>
+<pre><code class="language-crystal"><span class="n">1</span>.cubic_inches
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::CubicInches)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_meter-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_meter</strong>
+
+        <a class="method-permalink" href="#cubic_meter-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicmeter</p>
+<pre><code class="language-crystal"><span class="n">1</span>.cubic_meter
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::CubicMeter)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_meters-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_meters</strong>
+
+        <a class="method-permalink" href="#cubic_meters-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicmeters</p>
+<pre><code class="language-crystal"><span class="n">1</span>.cubic_meters
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::CubicMeters)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_micrometer-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_micrometer</strong>
+
+        <a class="method-permalink" href="#cubic_micrometer-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicmicrometer</p>
+<pre><code class="language-crystal"><span class="n">1</span>.cubic_micrometer
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::CubicMicrometer)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_micrometers-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_micrometers</strong>
+
+        <a class="method-permalink" href="#cubic_micrometers-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicmicrometers</p>
+<pre><code class="language-crystal"><span class="n">1</span>.cubic_micrometers
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::CubicMicrometers)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_micron-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_micron</strong>
+
+        <a class="method-permalink" href="#cubic_micron-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicmicron</p>
+<pre><code class="language-crystal"><span class="n">1</span>.cubic_micron
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::CubicMicron)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_microns-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_microns</strong>
+
+        <a class="method-permalink" href="#cubic_microns-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicmicrons</p>
+<pre><code class="language-crystal"><span class="n">1</span>.cubic_microns
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::CubicMicrons)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_mile-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_mile</strong>
+
+        <a class="method-permalink" href="#cubic_mile-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicmile</p>
+<pre><code class="language-crystal"><span class="n">1</span>.cubic_mile
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::CubicMile)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_miles-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_miles</strong>
+
+        <a class="method-permalink" href="#cubic_miles-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicmiles</p>
+<pre><code class="language-crystal"><span class="n">1</span>.cubic_miles
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::CubicMiles)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_millimeter-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_millimeter</strong>
+
+        <a class="method-permalink" href="#cubic_millimeter-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicmillimeter</p>
+<pre><code class="language-crystal"><span class="n">1</span>.cubic_millimeter
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::CubicMillimeter)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_millimeters-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_millimeters</strong>
+
+        <a class="method-permalink" href="#cubic_millimeters-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicmillimeters</p>
+<pre><code class="language-crystal"><span class="n">1</span>.cubic_millimeters
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::CubicMillimeters)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_nanometer-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_nanometer</strong>
+
+        <a class="method-permalink" href="#cubic_nanometer-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicnanometer</p>
+<pre><code class="language-crystal"><span class="n">1</span>.cubic_nanometer
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::CubicNanometer)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_nanometers-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_nanometers</strong>
+
+        <a class="method-permalink" href="#cubic_nanometers-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicnanometers</p>
+<pre><code class="language-crystal"><span class="n">1</span>.cubic_nanometers
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::CubicNanometers)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_yard-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_yard</strong>
+
+        <a class="method-permalink" href="#cubic_yard-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicyard</p>
+<pre><code class="language-crystal"><span class="n">1</span>.cubic_yard
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::CubicYard)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubic_yards-instance-method">
+      <div class="signature">
+        
+        def <strong>cubic_yards</strong>
+
+        <a class="method-permalink" href="#cubic_yards-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cubicyards</p>
+<pre><code class="language-crystal"><span class="n">1</span>.cubic_yards
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::CubicYards)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cup-instance-method">
+      <div class="signature">
+        
+        def <strong>cup</strong>
+
+        <a class="method-permalink" href="#cup-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cup</p>
+<pre><code class="language-crystal"><span class="n">1</span>.cup
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::Cup)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cups-instance-method">
+      <div class="signature">
+        
+        def <strong>cups</strong>
+
+        <a class="method-permalink" href="#cups-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> cups</p>
+<pre><code class="language-crystal"><span class="n">1</span>.cups
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::Cups)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -680,7 +2424,76 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L183" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L236" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="fl_oz-instance-method">
+      <div class="signature">
+        
+        def <strong>fl_oz</strong>
+
+        <a class="method-permalink" href="#fl_oz-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> floz</p>
+<pre><code class="language-crystal"><span class="n">1</span>.fl_oz
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::FlOz)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="fluid_ounce-instance-method">
+      <div class="signature">
+        
+        def <strong>fluid_ounce</strong>
+
+        <a class="method-permalink" href="#fluid_ounce-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> fluidounce</p>
+<pre><code class="language-crystal"><span class="n">1</span>.fluid_ounce
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::FluidOunce)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="fluid_ounces-instance-method">
+      <div class="signature">
+        
+        def <strong>fluid_ounces</strong>
+
+        <a class="method-permalink" href="#fluid_ounces-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> fluidounces</p>
+<pre><code class="language-crystal"><span class="n">1</span>.fluid_ounces
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::FluidOunces)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -703,7 +2516,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L183" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L236" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -726,7 +2539,53 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L183" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L236" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ft2-instance-method">
+      <div class="signature">
+        
+        def <strong>ft2</strong>
+
+        <a class="method-permalink" href="#ft2-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> ft2</p>
+<pre><code class="language-crystal"><span class="n">1</span>.ft2
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::Ft2)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ft3-instance-method">
+      <div class="signature">
+        
+        def <strong>ft3</strong>
+
+        <a class="method-permalink" href="#ft3-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> ft3</p>
+<pre><code class="language-crystal"><span class="n">1</span>.ft3
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::Ft3)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -742,7 +2601,172 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L156" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/weight.cr#L158" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="gal-instance-method">
+      <div class="signature">
+        
+        def <strong>gal</strong>
+
+        <a class="method-permalink" href="#gal-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> gal</p>
+<pre><code class="language-crystal"><span class="n">1</span>.gal
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::Gal)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="gallon-instance-method">
+      <div class="signature">
+        
+        def <strong>gallon</strong>
+
+        <a class="method-permalink" href="#gallon-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> gallon</p>
+<pre><code class="language-crystal"><span class="n">1</span>.gallon
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::Gallon)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="gallons-instance-method">
+      <div class="signature">
+        
+        def <strong>gallons</strong>
+
+        <a class="method-permalink" href="#gallons-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> gallons</p>
+<pre><code class="language-crystal"><span class="n">1</span>.gallons
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::Gallons)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="gb-instance-method">
+      <div class="signature">
+        
+        def <strong>gb</strong>
+
+        <a class="method-permalink" href="#gb-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L160" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="gib-instance-method">
+      <div class="signature">
+        
+        def <strong>gib</strong>
+
+        <a class="method-permalink" href="#gib-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L160" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="gibibyte-instance-method">
+      <div class="signature">
+        
+        def <strong>gibibyte</strong>
+
+        <a class="method-permalink" href="#gibibyte-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L160" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="gibibytes-instance-method">
+      <div class="signature">
+        
+        def <strong>gibibytes</strong>
+
+        <a class="method-permalink" href="#gibibytes-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L160" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="gigabyte-instance-method">
+      <div class="signature">
+        
+        def <strong>gigabyte</strong>
+
+        <a class="method-permalink" href="#gigabyte-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L160" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="gigabytes-instance-method">
+      <div class="signature">
+        
+        def <strong>gigabytes</strong>
+
+        <a class="method-permalink" href="#gigabytes-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L160" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -758,7 +2782,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L156" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/weight.cr#L158" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -774,7 +2798,76 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L156" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/weight.cr#L158" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ha-instance-method">
+      <div class="signature">
+        
+        def <strong>ha</strong>
+
+        <a class="method-permalink" href="#ha-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> ha</p>
+<pre><code class="language-crystal"><span class="n">1</span>.ha
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::Ha)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="hectare-instance-method">
+      <div class="signature">
+        
+        def <strong>hectare</strong>
+
+        <a class="method-permalink" href="#hectare-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> hectare</p>
+<pre><code class="language-crystal"><span class="n">1</span>.hectare
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::Hectare)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="hectares-instance-method">
+      <div class="signature">
+        
+        def <strong>hectares</strong>
+
+        <a class="method-permalink" href="#hectares-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> hectares</p>
+<pre><code class="language-crystal"><span class="n">1</span>.hectares
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::Hectares)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -797,7 +2890,53 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L183" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L236" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="in2-instance-method">
+      <div class="signature">
+        
+        def <strong>in2</strong>
+
+        <a class="method-permalink" href="#in2-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> in2</p>
+<pre><code class="language-crystal"><span class="n">1</span>.in2
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::In2)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="in3-instance-method">
+      <div class="signature">
+        
+        def <strong>in3</strong>
+
+        <a class="method-permalink" href="#in3-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> in3</p>
+<pre><code class="language-crystal"><span class="n">1</span>.in3
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::In3)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -820,7 +2959,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L183" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L236" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -843,7 +2982,23 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L183" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L236" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="kb-instance-method">
+      <div class="signature">
+        
+        def <strong>kb</strong>
+
+        <a class="method-permalink" href="#kb-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L160" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -859,7 +3014,87 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L156" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/weight.cr#L158" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="kib-instance-method">
+      <div class="signature">
+        
+        def <strong>kib</strong>
+
+        <a class="method-permalink" href="#kib-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L160" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="kibibyte-instance-method">
+      <div class="signature">
+        
+        def <strong>kibibyte</strong>
+
+        <a class="method-permalink" href="#kibibyte-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L160" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="kibibytes-instance-method">
+      <div class="signature">
+        
+        def <strong>kibibytes</strong>
+
+        <a class="method-permalink" href="#kibibytes-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L160" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="kilobyte-instance-method">
+      <div class="signature">
+        
+        def <strong>kilobyte</strong>
+
+        <a class="method-permalink" href="#kilobyte-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L160" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="kilobytes-instance-method">
+      <div class="signature">
+        
+        def <strong>kilobytes</strong>
+
+        <a class="method-permalink" href="#kilobytes-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L160" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -875,7 +3110,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L156" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/weight.cr#L158" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -891,7 +3126,53 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L156" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/weight.cr#L158" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="kiloliter-instance-method">
+      <div class="signature">
+        
+        def <strong>kiloliter</strong>
+
+        <a class="method-permalink" href="#kiloliter-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> kiloliter</p>
+<pre><code class="language-crystal"><span class="n">1</span>.kiloliter
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::Kiloliter)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="kiloliters-instance-method">
+      <div class="signature">
+        
+        def <strong>kiloliters</strong>
+
+        <a class="method-permalink" href="#kiloliters-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> kiloliters</p>
+<pre><code class="language-crystal"><span class="n">1</span>.kiloliters
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::Kiloliters)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -914,7 +3195,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L183" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L236" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -937,7 +3218,30 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L183" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L236" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="kl-instance-method">
+      <div class="signature">
+        
+        def <strong>kl</strong>
+
+        <a class="method-permalink" href="#kl-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> kl</p>
+<pre><code class="language-crystal"><span class="n">1</span>.kl
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::KL)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -960,7 +3264,53 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L183" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L236" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="km2-instance-method">
+      <div class="signature">
+        
+        def <strong>km2</strong>
+
+        <a class="method-permalink" href="#km2-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> km2</p>
+<pre><code class="language-crystal"><span class="n">1</span>.km2
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::KM2)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="l-instance-method">
+      <div class="signature">
+        
+        def <strong>l</strong>
+
+        <a class="method-permalink" href="#l-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> l</p>
+<pre><code class="language-crystal"><span class="n">1</span>.l
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::L)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -976,7 +3326,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L156" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/weight.cr#L158" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -992,7 +3342,147 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L156" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/weight.cr#L158" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="liter-instance-method">
+      <div class="signature">
+        
+        def <strong>liter</strong>
+
+        <a class="method-permalink" href="#liter-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> liter</p>
+<pre><code class="language-crystal"><span class="n">1</span>.liter
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::Liter)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="liters-instance-method">
+      <div class="signature">
+        
+        def <strong>liters</strong>
+
+        <a class="method-permalink" href="#liters-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> liters</p>
+<pre><code class="language-crystal"><span class="n">1</span>.liters
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::Liters)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="m2-instance-method">
+      <div class="signature">
+        
+        def <strong>m2</strong>
+
+        <a class="method-permalink" href="#m2-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> m2</p>
+<pre><code class="language-crystal"><span class="n">1</span>.m2
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::M2)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="m3-instance-method">
+      <div class="signature">
+        
+        def <strong>m3</strong>
+
+        <a class="method-permalink" href="#m3-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> m3</p>
+<pre><code class="language-crystal"><span class="n">1</span>.m3
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::M3)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mb-instance-method">
+      <div class="signature">
+        
+        def <strong>mb</strong>
+
+        <a class="method-permalink" href="#mb-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L160" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="megabyte-instance-method">
+      <div class="signature">
+        
+        def <strong>megabyte</strong>
+
+        <a class="method-permalink" href="#megabyte-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L160" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="megabytes-instance-method">
+      <div class="signature">
+        
+        def <strong>megabytes</strong>
+
+        <a class="method-permalink" href="#megabytes-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L160" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1015,7 +3505,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L183" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L236" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1038,7 +3528,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L183" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L236" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1054,7 +3544,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L156" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/weight.cr#L158" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1077,7 +3567,101 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L183" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L236" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mi2-instance-method">
+      <div class="signature">
+        
+        def <strong>mi2</strong>
+
+        <a class="method-permalink" href="#mi2-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> mi2</p>
+<pre><code class="language-crystal"><span class="n">1</span>.mi2
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::Mi2)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mi3-instance-method">
+      <div class="signature">
+        
+        def <strong>mi3</strong>
+
+        <a class="method-permalink" href="#mi3-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> mi3</p>
+<pre><code class="language-crystal"><span class="n">1</span>.mi3
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::Mi3)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mib-instance-method">
+      <div class="signature">
+        
+        def <strong>mib</strong>
+
+        <a class="method-permalink" href="#mib-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L160" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mibibyte-instance-method">
+      <div class="signature">
+        
+        def <strong>mibibyte</strong>
+
+        <a class="method-permalink" href="#mibibyte-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L160" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mibibytes-instance-method">
+      <div class="signature">
+        
+        def <strong>mibibytes</strong>
+
+        <a class="method-permalink" href="#mibibytes-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L160" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1100,7 +3684,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L183" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L236" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1123,7 +3707,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L183" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L236" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1146,7 +3730,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L183" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L236" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1169,7 +3753,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L183" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L236" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1192,7 +3776,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L183" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L236" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1215,7 +3799,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L183" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L236" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1231,7 +3815,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L156" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/weight.cr#L158" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1247,7 +3831,53 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L156" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/weight.cr#L158" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="milliliter-instance-method">
+      <div class="signature">
+        
+        def <strong>milliliter</strong>
+
+        <a class="method-permalink" href="#milliliter-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> milliliter</p>
+<pre><code class="language-crystal"><span class="n">1</span>.milliliter
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::Milliliter)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="milliliters-instance-method">
+      <div class="signature">
+        
+        def <strong>milliliters</strong>
+
+        <a class="method-permalink" href="#milliliters-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> milliliters</p>
+<pre><code class="language-crystal"><span class="n">1</span>.milliliters
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::Milliliters)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1270,7 +3900,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L183" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L236" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1293,7 +3923,30 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L183" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L236" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ml-instance-method">
+      <div class="signature">
+        
+        def <strong>ml</strong>
+
+        <a class="method-permalink" href="#ml-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> ml</p>
+<pre><code class="language-crystal"><span class="n">1</span>.ml
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::ML)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1316,7 +3969,53 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L183" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L236" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mm2-instance-method">
+      <div class="signature">
+        
+        def <strong>mm2</strong>
+
+        <a class="method-permalink" href="#mm2-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> mm2</p>
+<pre><code class="language-crystal"><span class="n">1</span>.mm2
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::MM2)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mm3-instance-method">
+      <div class="signature">
+        
+        def <strong>mm3</strong>
+
+        <a class="method-permalink" href="#mm3-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> mm3</p>
+<pre><code class="language-crystal"><span class="n">1</span>.mm3
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::MM3)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1339,7 +4038,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L183" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L236" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1362,7 +4061,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L183" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L236" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1385,7 +4084,53 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L183" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L236" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="nm2-instance-method">
+      <div class="signature">
+        
+        def <strong>nm2</strong>
+
+        <a class="method-permalink" href="#nm2-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> nm2</p>
+<pre><code class="language-crystal"><span class="n">1</span>.nm2
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::NM2)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="nm3-instance-method">
+      <div class="signature">
+        
+        def <strong>nm3</strong>
+
+        <a class="method-permalink" href="#nm3-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> nm3</p>
+<pre><code class="language-crystal"><span class="n">1</span>.nm3
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::NM3)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1401,7 +4146,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L156" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/weight.cr#L158" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1417,7 +4162,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L156" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/weight.cr#L158" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1433,7 +4178,149 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L156" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/weight.cr#L158" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pb-instance-method">
+      <div class="signature">
+        
+        def <strong>pb</strong>
+
+        <a class="method-permalink" href="#pb-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L160" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="petabyte-instance-method">
+      <div class="signature">
+        
+        def <strong>petabyte</strong>
+
+        <a class="method-permalink" href="#petabyte-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L160" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="petabytes-instance-method">
+      <div class="signature">
+        
+        def <strong>petabytes</strong>
+
+        <a class="method-permalink" href="#petabytes-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L160" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pib-instance-method">
+      <div class="signature">
+        
+        def <strong>pib</strong>
+
+        <a class="method-permalink" href="#pib-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L160" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pibibyte-instance-method">
+      <div class="signature">
+        
+        def <strong>pibibyte</strong>
+
+        <a class="method-permalink" href="#pibibyte-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L160" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pibibytes-instance-method">
+      <div class="signature">
+        
+        def <strong>pibibytes</strong>
+
+        <a class="method-permalink" href="#pibibytes-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L160" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pint-instance-method">
+      <div class="signature">
+        
+        def <strong>pint</strong>
+
+        <a class="method-permalink" href="#pint-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> pint</p>
+<pre><code class="language-crystal"><span class="n">1</span>.pint
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::Pint)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pints-instance-method">
+      <div class="signature">
+        
+        def <strong>pints</strong>
+
+        <a class="method-permalink" href="#pints-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> pints</p>
+<pre><code class="language-crystal"><span class="n">1</span>.pints
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::Pints)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1449,7 +4336,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L156" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/weight.cr#L158" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1465,7 +4352,766 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L156" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/weight.cr#L158" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pt-instance-method">
+      <div class="signature">
+        
+        def <strong>pt</strong>
+
+        <a class="method-permalink" href="#pt-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> pt</p>
+<pre><code class="language-crystal"><span class="n">1</span>.pt
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::Pt)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="qt-instance-method">
+      <div class="signature">
+        
+        def <strong>qt</strong>
+
+        <a class="method-permalink" href="#qt-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> qt</p>
+<pre><code class="language-crystal"><span class="n">1</span>.qt
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::Qt)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="quart-instance-method">
+      <div class="signature">
+        
+        def <strong>quart</strong>
+
+        <a class="method-permalink" href="#quart-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> quart</p>
+<pre><code class="language-crystal"><span class="n">1</span>.quart
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::Quart)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="quarts-instance-method">
+      <div class="signature">
+        
+        def <strong>quarts</strong>
+
+        <a class="method-permalink" href="#quarts-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> quarts</p>
+<pre><code class="language-crystal"><span class="n">1</span>.quarts
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::Quarts)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="sq_cm-instance-method">
+      <div class="signature">
+        
+        def <strong>sq_cm</strong>
+
+        <a class="method-permalink" href="#sq_cm-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> sq_cm</p>
+<pre><code class="language-crystal"><span class="n">1</span>.sq_cm
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::SqCM)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="sq_ft-instance-method">
+      <div class="signature">
+        
+        def <strong>sq_ft</strong>
+
+        <a class="method-permalink" href="#sq_ft-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> sq_ft</p>
+<pre><code class="language-crystal"><span class="n">1</span>.sq_ft
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::SqFt)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="sq_in-instance-method">
+      <div class="signature">
+        
+        def <strong>sq_in</strong>
+
+        <a class="method-permalink" href="#sq_in-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> sq_in</p>
+<pre><code class="language-crystal"><span class="n">1</span>.sq_in
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::SqIn)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="sq_km-instance-method">
+      <div class="signature">
+        
+        def <strong>sq_km</strong>
+
+        <a class="method-permalink" href="#sq_km-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> sq_km</p>
+<pre><code class="language-crystal"><span class="n">1</span>.sq_km
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::SqKM)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="sq_m-instance-method">
+      <div class="signature">
+        
+        def <strong>sq_m</strong>
+
+        <a class="method-permalink" href="#sq_m-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> sq_m</p>
+<pre><code class="language-crystal"><span class="n">1</span>.sq_m
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::SqM)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="sq_mi-instance-method">
+      <div class="signature">
+        
+        def <strong>sq_mi</strong>
+
+        <a class="method-permalink" href="#sq_mi-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> sq_mi</p>
+<pre><code class="language-crystal"><span class="n">1</span>.sq_mi
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::SqMi)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="sq_mm-instance-method">
+      <div class="signature">
+        
+        def <strong>sq_mm</strong>
+
+        <a class="method-permalink" href="#sq_mm-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> sq_mm</p>
+<pre><code class="language-crystal"><span class="n">1</span>.sq_mm
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::SqMM)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="sq_nm-instance-method">
+      <div class="signature">
+        
+        def <strong>sq_nm</strong>
+
+        <a class="method-permalink" href="#sq_nm-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> sq_nm</p>
+<pre><code class="language-crystal"><span class="n">1</span>.sq_nm
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::SqNM)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="sq_yd-instance-method">
+      <div class="signature">
+        
+        def <strong>sq_yd</strong>
+
+        <a class="method-permalink" href="#sq_yd-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> sq_yd</p>
+<pre><code class="language-crystal"><span class="n">1</span>.sq_yd
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::SqYd)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_centimeter-instance-method">
+      <div class="signature">
+        
+        def <strong>square_centimeter</strong>
+
+        <a class="method-permalink" href="#square_centimeter-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_centimeter</p>
+<pre><code class="language-crystal"><span class="n">1</span>.square_centimeter
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::SquareCentimeter)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_centimeters-instance-method">
+      <div class="signature">
+        
+        def <strong>square_centimeters</strong>
+
+        <a class="method-permalink" href="#square_centimeters-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_centimeters</p>
+<pre><code class="language-crystal"><span class="n">1</span>.square_centimeters
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::SquareCentimeters)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_feet-instance-method">
+      <div class="signature">
+        
+        def <strong>square_feet</strong>
+
+        <a class="method-permalink" href="#square_feet-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_feet</p>
+<pre><code class="language-crystal"><span class="n">1</span>.square_feet
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::SquareFeet)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_foot-instance-method">
+      <div class="signature">
+        
+        def <strong>square_foot</strong>
+
+        <a class="method-permalink" href="#square_foot-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_foot</p>
+<pre><code class="language-crystal"><span class="n">1</span>.square_foot
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::SquareFoot)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_inch-instance-method">
+      <div class="signature">
+        
+        def <strong>square_inch</strong>
+
+        <a class="method-permalink" href="#square_inch-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_inch</p>
+<pre><code class="language-crystal"><span class="n">1</span>.square_inch
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::SquareInch)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_inches-instance-method">
+      <div class="signature">
+        
+        def <strong>square_inches</strong>
+
+        <a class="method-permalink" href="#square_inches-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_inches</p>
+<pre><code class="language-crystal"><span class="n">1</span>.square_inches
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::SquareInches)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_kilometer-instance-method">
+      <div class="signature">
+        
+        def <strong>square_kilometer</strong>
+
+        <a class="method-permalink" href="#square_kilometer-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_kilometer</p>
+<pre><code class="language-crystal"><span class="n">1</span>.square_kilometer
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::SquareKilometer)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_kilometers-instance-method">
+      <div class="signature">
+        
+        def <strong>square_kilometers</strong>
+
+        <a class="method-permalink" href="#square_kilometers-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_kilometers</p>
+<pre><code class="language-crystal"><span class="n">1</span>.square_kilometers
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::SquareKilometers)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_meter-instance-method">
+      <div class="signature">
+        
+        def <strong>square_meter</strong>
+
+        <a class="method-permalink" href="#square_meter-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_meter</p>
+<pre><code class="language-crystal"><span class="n">1</span>.square_meter
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::SquareMeter)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_meters-instance-method">
+      <div class="signature">
+        
+        def <strong>square_meters</strong>
+
+        <a class="method-permalink" href="#square_meters-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_meters</p>
+<pre><code class="language-crystal"><span class="n">1</span>.square_meters
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::SquareMeters)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_micrometer-instance-method">
+      <div class="signature">
+        
+        def <strong>square_micrometer</strong>
+
+        <a class="method-permalink" href="#square_micrometer-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_micrometer</p>
+<pre><code class="language-crystal"><span class="n">1</span>.square_micrometer
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::SquareMicrometer)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_micrometers-instance-method">
+      <div class="signature">
+        
+        def <strong>square_micrometers</strong>
+
+        <a class="method-permalink" href="#square_micrometers-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_micrometers</p>
+<pre><code class="language-crystal"><span class="n">1</span>.square_micrometers
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::SquareMicrometers)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_mile-instance-method">
+      <div class="signature">
+        
+        def <strong>square_mile</strong>
+
+        <a class="method-permalink" href="#square_mile-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_mile</p>
+<pre><code class="language-crystal"><span class="n">1</span>.square_mile
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::SquareMile)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_miles-instance-method">
+      <div class="signature">
+        
+        def <strong>square_miles</strong>
+
+        <a class="method-permalink" href="#square_miles-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_miles</p>
+<pre><code class="language-crystal"><span class="n">1</span>.square_miles
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::SquareMiles)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_millimeter-instance-method">
+      <div class="signature">
+        
+        def <strong>square_millimeter</strong>
+
+        <a class="method-permalink" href="#square_millimeter-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_millimeter</p>
+<pre><code class="language-crystal"><span class="n">1</span>.square_millimeter
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::SquareMillimeter)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_millimeters-instance-method">
+      <div class="signature">
+        
+        def <strong>square_millimeters</strong>
+
+        <a class="method-permalink" href="#square_millimeters-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_millimeters</p>
+<pre><code class="language-crystal"><span class="n">1</span>.square_millimeters
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::SquareMillimeters)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_nanometer-instance-method">
+      <div class="signature">
+        
+        def <strong>square_nanometer</strong>
+
+        <a class="method-permalink" href="#square_nanometer-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_nanometer</p>
+<pre><code class="language-crystal"><span class="n">1</span>.square_nanometer
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::SquareNanometer)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_nanometers-instance-method">
+      <div class="signature">
+        
+        def <strong>square_nanometers</strong>
+
+        <a class="method-permalink" href="#square_nanometers-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_nanometers</p>
+<pre><code class="language-crystal"><span class="n">1</span>.square_nanometers
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::SquareNanometers)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_yard-instance-method">
+      <div class="signature">
+        
+        def <strong>square_yard</strong>
+
+        <a class="method-permalink" href="#square_yard-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_yard</p>
+<pre><code class="language-crystal"><span class="n">1</span>.square_yard
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::SquareYard)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_yards-instance-method">
+      <div class="signature">
+        
+        def <strong>square_yards</strong>
+
+        <a class="method-permalink" href="#square_yards-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> square_yards</p>
+<pre><code class="language-crystal"><span class="n">1</span>.square_yards
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::SquareYards)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1481,7 +5127,218 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L156" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/weight.cr#L158" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tablespoon-instance-method">
+      <div class="signature">
+        
+        def <strong>tablespoon</strong>
+
+        <a class="method-permalink" href="#tablespoon-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> tablespoon</p>
+<pre><code class="language-crystal"><span class="n">1</span>.tablespoon
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::Tablespoon)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tablespoons-instance-method">
+      <div class="signature">
+        
+        def <strong>tablespoons</strong>
+
+        <a class="method-permalink" href="#tablespoons-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> tablespoons</p>
+<pre><code class="language-crystal"><span class="n">1</span>.tablespoons
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::Tablespoons)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tb-instance-method">
+      <div class="signature">
+        
+        def <strong>tb</strong>
+
+        <a class="method-permalink" href="#tb-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L160" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tbsp-instance-method">
+      <div class="signature">
+        
+        def <strong>tbsp</strong>
+
+        <a class="method-permalink" href="#tbsp-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> tbsp</p>
+<pre><code class="language-crystal"><span class="n">1</span>.tbsp
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::Tbsp)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="teaspoon-instance-method">
+      <div class="signature">
+        
+        def <strong>teaspoon</strong>
+
+        <a class="method-permalink" href="#teaspoon-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> teaspoon</p>
+<pre><code class="language-crystal"><span class="n">1</span>.teaspoon
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::Teaspoon)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="teaspoons-instance-method">
+      <div class="signature">
+        
+        def <strong>teaspoons</strong>
+
+        <a class="method-permalink" href="#teaspoons-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> teaspoons</p>
+<pre><code class="language-crystal"><span class="n">1</span>.teaspoons
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::Teaspoons)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="terabyte-instance-method">
+      <div class="signature">
+        
+        def <strong>terabyte</strong>
+
+        <a class="method-permalink" href="#terabyte-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L160" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="terabytes-instance-method">
+      <div class="signature">
+        
+        def <strong>terabytes</strong>
+
+        <a class="method-permalink" href="#terabytes-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L160" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tib-instance-method">
+      <div class="signature">
+        
+        def <strong>tib</strong>
+
+        <a class="method-permalink" href="#tib-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L160" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tibibyte-instance-method">
+      <div class="signature">
+        
+        def <strong>tibibyte</strong>
+
+        <a class="method-permalink" href="#tibibyte-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L160" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tibibytes-instance-method">
+      <div class="signature">
+        
+        def <strong>tibibytes</strong>
+
+        <a class="method-permalink" href="#tibibytes-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/data.cr#L160" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1497,7 +5354,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L156" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/weight.cr#L158" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1513,7 +5370,30 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/weight.cr#L156" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/weight.cr#L158" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tsp-instance-method">
+      <div class="signature">
+        
+        def <strong>tsp</strong>
+
+        <a class="method-permalink" href="#tsp-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> tsp</p>
+<pre><code class="language-crystal"><span class="n">1</span>.tsp
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::Tsp)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1536,7 +5416,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L183" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L236" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1559,7 +5439,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L183" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L236" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1582,7 +5462,53 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L183" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L236" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="yd2-instance-method">
+      <div class="signature">
+        
+        def <strong>yd2</strong>
+
+        <a class="method-permalink" href="#yd2-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Area.html">Measure::Area</a></code> of <code>self</code> yd2</p>
+<pre><code class="language-crystal"><span class="n">1</span>.yd2
+<span class="c"># =&gt; Measure::Area(@magnitude=1.0, @unit=Measure::Area::Unit::Yd2)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="yd3-instance-method">
+      <div class="signature">
+        
+        def <strong>yd3</strong>
+
+        <a class="method-permalink" href="#yd3-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Instantiate a <code><a href="Measure/Volume.html">Measure::Volume</a></code> of <code>self</code> yd3</p>
+<pre><code class="language-crystal"><span class="n">1</span>.yd3
+<span class="c"># =&gt; Measure::Volume(@magnitude=1.0, @unit=Measure::Volume::Unit::Yd3)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/volume.cr#L241" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1605,11 +5531,12 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L183" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L236" target="_blank">View source</a>]
         
       </div>
     </div>
   
+
 
 
 </div>

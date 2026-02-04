@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Crystal Docs 1.10.1">
-<meta name="crystal_docs.project_version" content="main">
+<meta name="generator" content="Crystal Docs 1.18.2">
+<meta name="crystal_docs.project_version" content="">
 <meta name="crystal_docs.project_name" content="measure">
 
 
@@ -14,7 +14,7 @@
 <script type="text/javascript" src="../js/doc.js"></script>
 
   <meta name="repository-name" content="measure">
-  <title>Measure::Length - measure main</title>
+  <title>Measure::Length - measure </title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../";
   </script>
@@ -45,7 +45,7 @@
       </h1>
 
       <span class="project-version">
-        main
+        
       </span>
     </div>
   </div>
@@ -62,6 +62,36 @@
       
         <ul>
   
+  <li class="parent " data-id="measure/Measure/Area" data-name="measure::area">
+      <a href="../Measure/Area.html">Area</a>
+      
+        <ul>
+  
+  <li class=" " data-id="measure/Measure/Area/Unit" data-name="measure::area::unit">
+      <a href="../Measure/Area/Unit.html">Unit</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="measure/Measure/Data" data-name="measure::data">
+      <a href="../Measure/Data.html">Data</a>
+      
+        <ul>
+  
+  <li class=" " data-id="measure/Measure/Data/Unit" data-name="measure::data::unit">
+      <a href="../Measure/Data/Unit.html">Unit</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
   <li class="parent open current" data-id="measure/Measure/Length" data-name="measure::length">
       <a href="../Measure/Length.html">Length</a>
       
@@ -69,6 +99,21 @@
   
   <li class=" " data-id="measure/Measure/Length/Unit" data-name="measure::length::unit">
       <a href="../Measure/Length/Unit.html">Unit</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="measure/Measure/Volume" data-name="measure::volume">
+      <a href="../Measure/Volume.html">Volume</a>
+      
+        <ul>
+  
+  <li class=" " data-id="measure/Measure/Volume/Unit" data-name="measure::volume::unit">
+      <a href="../Measure/Volume/Unit.html">Unit</a>
       
     </li>
   
@@ -111,12 +156,16 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">struct</span> Measure::<wbr>Length
+  <span class="kind">
+    struct
+  </span> Measure::<wbr>Length
 
 </h1>
 
 
   <ul class="superclass-hierarchy"><li class="superclass"><a href="../Measure/Length.html">Measure::Length</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+
+
 
 
 
@@ -160,7 +209,7 @@
   </h2>
   
     
-      <a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L4" target="_blank">
+      <a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L6" target="_blank">
         length.cr
       </a>
     
@@ -171,6 +220,7 @@
 
 
 
+  
   <h2>
     <a id="constructors" class="anchor" href="#constructors">
   <svg class="octicon-link" aria-hidden="true">
@@ -193,14 +243,19 @@
         
       </li>
     
+      <li class="entry-summary">
+        <a href="#new%28%2A%2C__pull_for_json_serializablepull%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(*, __pull_for_json_serializable pull : JSON::PullParser)</a>
+        
+      </li>
+    
   </ul>
 
 
+  
 
+  
 
-
-
-
+  
   <h2>
     <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
   <svg class="octicon-link" aria-hidden="true">
@@ -215,6 +270,13 @@
         <a href="#%2A%28scalar%3ANumber%29%3Aself-instance-method" class="signature"><strong>#*</strong>(scalar : Number) : <span class="k">self</span></a>
         
           <div class="summary"><p>Multiply by a scalar value</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#%2A%28other%3ALength%29%3AArea-instance-method" class="signature"><strong>#*</strong>(other : Length) : Area</a>
+        
+          <div class="summary"><p>Multiply by another <code><a href="../Measure/Length.html">Length</a></code> to get an <code><a href="../Measure/Area.html">Area</a></code></p></div>
         
       </li>
     
@@ -235,7 +297,7 @@
       <li class="entry-summary">
         <a href="#/%28scalar%3ANumber%29%3Aself-instance-method" class="signature"><strong>#/</strong>(scalar : Number) : <span class="k">self</span></a>
         
-          <div class="summary"><p>Multiply by a scalar value</p></div>
+          <div class="summary"><p>Divide by a scalar value</p></div>
         
       </li>
     
@@ -254,9 +316,23 @@
       </li>
     
       <li class="entry-summary">
+        <a href="#cubed%3AVolume-instance-method" class="signature"><strong>#cubed</strong> : Volume</a>
+        
+          <div class="summary"><p>Return the cube of this length as a <code><a href="../Measure/Volume.html">Volume</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#magnitude%3AFloat64-instance-method" class="signature"><strong>#magnitude</strong> : Float64</a>
         
           <div class="summary"><p>The numeric part of the measurement — the <code>1</code> in <code>1.meter</code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#squared%3AArea-instance-method" class="signature"><strong>#squared</strong> : Area</a>
+        
+          <div class="summary"><p>Return the square of this length as an <code><a href="../Measure/Area.html">Area</a></code></p></div>
         
       </li>
     
@@ -292,76 +368,76 @@
 
 
 
-<div class="methods-inherited">
+  <div class="methods-inherited">
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+  </div>
+
   
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-  
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-  
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-  
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-  
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-  
-</div>
-
-
   <h2>
     <a id="constructor-detail" class="anchor" href="#constructor-detail">
   <svg class="octicon-link" aria-hidden="true">
@@ -387,7 +463,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L15" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L17" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -403,18 +479,34 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L6" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L8" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new(*,__pull_for_json_serializablepull:JSON::PullParser)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(*, __pull_for_json_serializable pull : JSON::PullParser)
+
+        <a class="method-permalink" href="#new%28%2A%2C__pull_for_json_serializablepull%3AJSON%3A%3APullParser%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L8" target="_blank">View source</a>]
         
       </div>
     </div>
   
 
 
+  
 
+  
 
-
-
-
+  
   <h2>
     <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
   <svg class="octicon-link" aria-hidden="true">
@@ -442,7 +534,30 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L68" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L70" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="*(other:Length):Area-instance-method">
+      <div class="signature">
+        
+        def <strong>*</strong>(other : <a href="../Measure/Length.html">Length</a>) : <a href="../Measure/Area.html">Area</a>
+
+        <a class="method-permalink" href="#%2A%28other%3ALength%29%3AArea-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Multiply by another <code><a href="../Measure/Length.html">Length</a></code> to get an <code><a href="../Measure/Area.html">Area</a></code></p>
+<pre><code class="language-crystal"><span class="n">2</span>.meters <span class="o">*</span> <span class="n">3</span>.meters
+<span class="c"># =&gt; Measure::Area(@magnitude=6.0, @unit=Measure::Area::Unit::SquareMeter)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L80" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -466,7 +581,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L47" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L49" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -490,7 +605,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L58" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L60" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -505,7 +620,7 @@
       
         <div class="doc">
           
-          <p>Multiply by a scalar value</p>
+          <p>Divide by a scalar value</p>
 <pre><code class="language-crystal"><span class="n">10</span>.miles <span class="o">/</span> <span class="n">2</span>
 <span class="c"># =&gt; Measure::Length(@magnitude=5.0, @unit=Measure::Length::Unit::Mile)</span></code></pre>
         </div>
@@ -513,7 +628,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L78" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L131" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -540,7 +655,7 @@ otherwise.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L93" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L146" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -565,7 +680,30 @@ and we can discuss how to support it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L102" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L155" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cubed:Volume-instance-method">
+      <div class="signature">
+        
+        def <strong>cubed</strong> : <a href="../Measure/Volume.html">Volume</a>
+
+        <a class="method-permalink" href="#cubed%3AVolume-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Return the cube of this length as a <code><a href="../Measure/Volume.html">Volume</a></code></p>
+<pre><code class="language-crystal"><span class="n">2</span>.meters.cubed
+<span class="c"># =&gt; Measure::Volume(@magnitude=8.0, @unit=Measure::Volume::Unit::CubicMeter)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L121" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -586,7 +724,30 @@ and we can discuss how to support it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L9" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L11" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="squared:Area-instance-method">
+      <div class="signature">
+        
+        def <strong>squared</strong> : <a href="../Measure/Area.html">Area</a>
+
+        <a class="method-permalink" href="#squared%3AArea-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Return the square of this length as an <code><a href="../Measure/Area.html">Area</a></code></p>
+<pre><code class="language-crystal"><span class="n">2</span>.meters.squared
+<span class="c"># =&gt; Measure::Area(@magnitude=4.0, @unit=Measure::Area::Unit::SquareMeter)</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L111" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -609,7 +770,7 @@ and we can discuss how to support it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L35" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L37" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -630,7 +791,7 @@ and we can discuss how to support it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L24" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L26" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -651,7 +812,7 @@ and we can discuss how to support it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L19" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L21" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -672,11 +833,12 @@ and we can discuss how to support it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/jgaskins/measure/blob/main/src/length.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/length.cr#L14" target="_blank">View source</a>]
         
       </div>
     </div>
   
+
 
 
 </div>

@@ -1,0 +1,1748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.18.2">
+<meta name="crystal_docs.project_version" content="">
+<meta name="crystal_docs.project_name" content="measure">
+
+
+
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../js/doc.js"></script>
+
+  <meta name="repository-name" content="measure">
+  <title>Measure::Area::Unit - measure </title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../../index.html">
+          measure
+        </a>
+      </h1>
+
+      <span class="project-version">
+        
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="measure/Measure" data-name="measure">
+      <a href="../../Measure.html">Measure</a>
+      
+        <ul>
+  
+  <li class="parent open current" data-id="measure/Measure/Area" data-name="measure::area">
+      <a href="../../Measure/Area.html">Area</a>
+      
+        <ul>
+  
+  <li class=" current" data-id="measure/Measure/Area/Unit" data-name="measure::area::unit">
+      <a href="../../Measure/Area/Unit.html">Unit</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="measure/Measure/Data" data-name="measure::data">
+      <a href="../../Measure/Data.html">Data</a>
+      
+        <ul>
+  
+  <li class=" " data-id="measure/Measure/Data/Unit" data-name="measure::data::unit">
+      <a href="../../Measure/Data/Unit.html">Unit</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="measure/Measure/Length" data-name="measure::length">
+      <a href="../../Measure/Length.html">Length</a>
+      
+        <ul>
+  
+  <li class=" " data-id="measure/Measure/Length/Unit" data-name="measure::length::unit">
+      <a href="../../Measure/Length/Unit.html">Unit</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="measure/Measure/Volume" data-name="measure::volume">
+      <a href="../../Measure/Volume.html">Volume</a>
+      
+        <ul>
+  
+  <li class=" " data-id="measure/Measure/Volume/Unit" data-name="measure::volume::unit">
+      <a href="../../Measure/Volume/Unit.html">Unit</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="measure/Measure/Weight" data-name="measure::weight">
+      <a href="../../Measure/Weight.html">Weight</a>
+      
+        <ul>
+  
+  <li class=" " data-id="measure/Measure/Weight/Unit" data-name="measure::weight::unit">
+      <a href="../../Measure/Weight/Unit.html">Unit</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="measure/Number" data-name="number">
+      <a href="../../Number.html">Number</a>
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">
+    enum
+  </span> Measure::<wbr>Area::<wbr>Unit
+
+</h1>
+
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>The units available to <code><a href="../../Measure/Area.html">Area</a></code> instances.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L178" target="_blank">
+        area.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>
+      <a id="enum-members" class="anchor" href="#enum-members">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Enum Members
+    </h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="SquareMeter">
+        <strong>SquareMeter</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="SquareMeters">
+        <strong>SquareMeters</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="SqM">
+        <strong>SqM</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="M2">
+        <strong>M2</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="SquareKilometer">
+        <strong>SquareKilometer</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="SquareKilometers">
+        <strong>SquareKilometers</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="SqKM">
+        <strong>SqKM</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="KM2">
+        <strong>KM2</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="SquareCentimeter">
+        <strong>SquareCentimeter</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="SquareCentimeters">
+        <strong>SquareCentimeters</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="SqCM">
+        <strong>SqCM</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="CM2">
+        <strong>CM2</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="SquareMillimeter">
+        <strong>SquareMillimeter</strong> = <code><span class="n">3</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="SquareMillimeters">
+        <strong>SquareMillimeters</strong> = <code><span class="n">3</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="SqMM">
+        <strong>SqMM</strong> = <code><span class="n">3</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="MM2">
+        <strong>MM2</strong> = <code><span class="n">3</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="SquareMicrometer">
+        <strong>SquareMicrometer</strong> = <code><span class="n">4</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="SquareMicrometers">
+        <strong>SquareMicrometers</strong> = <code><span class="n">4</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="SquareNanometer">
+        <strong>SquareNanometer</strong> = <code><span class="n">5</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="SquareNanometers">
+        <strong>SquareNanometers</strong> = <code><span class="n">5</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="SqNM">
+        <strong>SqNM</strong> = <code><span class="n">5</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="NM2">
+        <strong>NM2</strong> = <code><span class="n">5</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="SquareFoot">
+        <strong>SquareFoot</strong> = <code><span class="n">6</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="SquareFeet">
+        <strong>SquareFeet</strong> = <code><span class="n">6</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="SqFt">
+        <strong>SqFt</strong> = <code><span class="n">6</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Ft2">
+        <strong>Ft2</strong> = <code><span class="n">6</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="SquareYard">
+        <strong>SquareYard</strong> = <code><span class="n">7</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="SquareYards">
+        <strong>SquareYards</strong> = <code><span class="n">7</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="SqYd">
+        <strong>SqYd</strong> = <code><span class="n">7</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Yd2">
+        <strong>Yd2</strong> = <code><span class="n">7</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="SquareInch">
+        <strong>SquareInch</strong> = <code><span class="n">8</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="SquareInches">
+        <strong>SquareInches</strong> = <code><span class="n">8</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="SqIn">
+        <strong>SqIn</strong> = <code><span class="n">8</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="In2">
+        <strong>In2</strong> = <code><span class="n">8</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="SquareMile">
+        <strong>SquareMile</strong> = <code><span class="n">9</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="SquareMiles">
+        <strong>SquareMiles</strong> = <code><span class="n">9</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="SqMi">
+        <strong>SqMi</strong> = <code><span class="n">9</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Mi2">
+        <strong>Mi2</strong> = <code><span class="n">9</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Acre">
+        <strong>Acre</strong> = <code><span class="n">10</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Acres">
+        <strong>Acres</strong> = <code><span class="n">10</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Hectare">
+        <strong>Hectare</strong> = <code><span class="n">11</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Hectares">
+        <strong>Hectares</strong> = <code><span class="n">11</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Ha">
+        <strong>Ha</strong> = <code><span class="n">11</span></code>
+      </dt>
+      
+    
+  </dl>
+
+
+
+  
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#acre%3F-instance-method" class="signature"><strong>#acre?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#Acre">Acre</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#acres%3F-instance-method" class="signature"><strong>#acres?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#Acres">Acres</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cm2%3F-instance-method" class="signature"><strong>#cm2?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#CM2">CM2</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ft2%3F-instance-method" class="signature"><strong>#ft2?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#Ft2">Ft2</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ha%3F-instance-method" class="signature"><strong>#ha?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#Ha">Ha</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#hectare%3F-instance-method" class="signature"><strong>#hectare?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#Hectare">Hectare</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#hectares%3F-instance-method" class="signature"><strong>#hectares?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#Hectares">Hectares</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#in2%3F-instance-method" class="signature"><strong>#in2?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#In2">In2</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#km2%3F-instance-method" class="signature"><strong>#km2?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#KM2">KM2</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#m2%3F-instance-method" class="signature"><strong>#m2?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#M2">M2</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mi2%3F-instance-method" class="signature"><strong>#mi2?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#Mi2">Mi2</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mm2%3F-instance-method" class="signature"><strong>#mm2?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#MM2">MM2</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#nm2%3F-instance-method" class="signature"><strong>#nm2?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#NM2">NM2</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#sq_cm%3F-instance-method" class="signature"><strong>#sq_cm?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SqCM">SqCM</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#sq_ft%3F-instance-method" class="signature"><strong>#sq_ft?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SqFt">SqFt</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#sq_in%3F-instance-method" class="signature"><strong>#sq_in?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SqIn">SqIn</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#sq_km%3F-instance-method" class="signature"><strong>#sq_km?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SqKM">SqKM</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#sq_m%3F-instance-method" class="signature"><strong>#sq_m?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SqM">SqM</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#sq_mi%3F-instance-method" class="signature"><strong>#sq_mi?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SqMi">SqMi</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#sq_mm%3F-instance-method" class="signature"><strong>#sq_mm?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SqMM">SqMM</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#sq_nm%3F-instance-method" class="signature"><strong>#sq_nm?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SqNM">SqNM</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#sq_yd%3F-instance-method" class="signature"><strong>#sq_yd?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SqYd">SqYd</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_centimeter%3F-instance-method" class="signature"><strong>#square_centimeter?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareCentimeter">SquareCentimeter</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_centimeters%3F-instance-method" class="signature"><strong>#square_centimeters?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareCentimeters">SquareCentimeters</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_feet%3F-instance-method" class="signature"><strong>#square_feet?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareFeet">SquareFeet</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_foot%3F-instance-method" class="signature"><strong>#square_foot?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareFoot">SquareFoot</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_inch%3F-instance-method" class="signature"><strong>#square_inch?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareInch">SquareInch</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_inches%3F-instance-method" class="signature"><strong>#square_inches?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareInches">SquareInches</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_kilometer%3F-instance-method" class="signature"><strong>#square_kilometer?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareKilometer">SquareKilometer</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_kilometers%3F-instance-method" class="signature"><strong>#square_kilometers?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareKilometers">SquareKilometers</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_meter%3F-instance-method" class="signature"><strong>#square_meter?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareMeter">SquareMeter</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_meters%3F-instance-method" class="signature"><strong>#square_meters?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareMeters">SquareMeters</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_micrometer%3F-instance-method" class="signature"><strong>#square_micrometer?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareMicrometer">SquareMicrometer</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_micrometers%3F-instance-method" class="signature"><strong>#square_micrometers?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareMicrometers">SquareMicrometers</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_mile%3F-instance-method" class="signature"><strong>#square_mile?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareMile">SquareMile</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_miles%3F-instance-method" class="signature"><strong>#square_miles?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareMiles">SquareMiles</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_millimeter%3F-instance-method" class="signature"><strong>#square_millimeter?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareMillimeter">SquareMillimeter</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_millimeters%3F-instance-method" class="signature"><strong>#square_millimeters?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareMillimeters">SquareMillimeters</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_nanometer%3F-instance-method" class="signature"><strong>#square_nanometer?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareNanometer">SquareNanometer</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_nanometers%3F-instance-method" class="signature"><strong>#square_nanometers?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareNanometers">SquareNanometers</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_yard%3F-instance-method" class="signature"><strong>#square_yard?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareYard">SquareYard</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square_yards%3F-instance-method" class="signature"><strong>#square_yards?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareYards">SquareYards</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#yd2%3F-instance-method" class="signature"><strong>#yd2?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#Yd2">Yd2</a></code></p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <div class="methods-inherited">
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+  </div>
+
+  
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="acre?-instance-method">
+      <div class="signature">
+        
+        def <strong>acre?</strong>
+
+        <a class="method-permalink" href="#acre%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#Acre">Acre</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L227" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="acres?-instance-method">
+      <div class="signature">
+        
+        def <strong>acres?</strong>
+
+        <a class="method-permalink" href="#acres%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#Acres">Acres</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L228" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cm2?-instance-method">
+      <div class="signature">
+        
+        def <strong>cm2?</strong>
+
+        <a class="method-permalink" href="#cm2%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#CM2">CM2</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L192" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ft2?-instance-method">
+      <div class="signature">
+        
+        def <strong>ft2?</strong>
+
+        <a class="method-permalink" href="#ft2%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#Ft2">Ft2</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L210" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ha?-instance-method">
+      <div class="signature">
+        
+        def <strong>ha?</strong>
+
+        <a class="method-permalink" href="#ha%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#Ha">Ha</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L232" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="hectare?-instance-method">
+      <div class="signature">
+        
+        def <strong>hectare?</strong>
+
+        <a class="method-permalink" href="#hectare%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#Hectare">Hectare</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L230" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="hectares?-instance-method">
+      <div class="signature">
+        
+        def <strong>hectares?</strong>
+
+        <a class="method-permalink" href="#hectares%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#Hectares">Hectares</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L231" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="in2?-instance-method">
+      <div class="signature">
+        
+        def <strong>in2?</strong>
+
+        <a class="method-permalink" href="#in2%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#In2">In2</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L220" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="km2?-instance-method">
+      <div class="signature">
+        
+        def <strong>km2?</strong>
+
+        <a class="method-permalink" href="#km2%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#KM2">KM2</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L187" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="m2?-instance-method">
+      <div class="signature">
+        
+        def <strong>m2?</strong>
+
+        <a class="method-permalink" href="#m2%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#M2">M2</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L182" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mi2?-instance-method">
+      <div class="signature">
+        
+        def <strong>mi2?</strong>
+
+        <a class="method-permalink" href="#mi2%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#Mi2">Mi2</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L225" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mm2?-instance-method">
+      <div class="signature">
+        
+        def <strong>mm2?</strong>
+
+        <a class="method-permalink" href="#mm2%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#MM2">MM2</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L197" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="nm2?-instance-method">
+      <div class="signature">
+        
+        def <strong>nm2?</strong>
+
+        <a class="method-permalink" href="#nm2%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#NM2">NM2</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L205" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="sq_cm?-instance-method">
+      <div class="signature">
+        
+        def <strong>sq_cm?</strong>
+
+        <a class="method-permalink" href="#sq_cm%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SqCM">SqCM</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L191" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="sq_ft?-instance-method">
+      <div class="signature">
+        
+        def <strong>sq_ft?</strong>
+
+        <a class="method-permalink" href="#sq_ft%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SqFt">SqFt</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L209" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="sq_in?-instance-method">
+      <div class="signature">
+        
+        def <strong>sq_in?</strong>
+
+        <a class="method-permalink" href="#sq_in%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SqIn">SqIn</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L219" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="sq_km?-instance-method">
+      <div class="signature">
+        
+        def <strong>sq_km?</strong>
+
+        <a class="method-permalink" href="#sq_km%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SqKM">SqKM</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L186" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="sq_m?-instance-method">
+      <div class="signature">
+        
+        def <strong>sq_m?</strong>
+
+        <a class="method-permalink" href="#sq_m%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SqM">SqM</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L181" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="sq_mi?-instance-method">
+      <div class="signature">
+        
+        def <strong>sq_mi?</strong>
+
+        <a class="method-permalink" href="#sq_mi%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SqMi">SqMi</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L224" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="sq_mm?-instance-method">
+      <div class="signature">
+        
+        def <strong>sq_mm?</strong>
+
+        <a class="method-permalink" href="#sq_mm%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SqMM">SqMM</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L196" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="sq_nm?-instance-method">
+      <div class="signature">
+        
+        def <strong>sq_nm?</strong>
+
+        <a class="method-permalink" href="#sq_nm%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SqNM">SqNM</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L204" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="sq_yd?-instance-method">
+      <div class="signature">
+        
+        def <strong>sq_yd?</strong>
+
+        <a class="method-permalink" href="#sq_yd%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SqYd">SqYd</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L214" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_centimeter?-instance-method">
+      <div class="signature">
+        
+        def <strong>square_centimeter?</strong>
+
+        <a class="method-permalink" href="#square_centimeter%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareCentimeter">SquareCentimeter</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L189" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_centimeters?-instance-method">
+      <div class="signature">
+        
+        def <strong>square_centimeters?</strong>
+
+        <a class="method-permalink" href="#square_centimeters%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareCentimeters">SquareCentimeters</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L190" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_feet?-instance-method">
+      <div class="signature">
+        
+        def <strong>square_feet?</strong>
+
+        <a class="method-permalink" href="#square_feet%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareFeet">SquareFeet</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L208" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_foot?-instance-method">
+      <div class="signature">
+        
+        def <strong>square_foot?</strong>
+
+        <a class="method-permalink" href="#square_foot%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareFoot">SquareFoot</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L207" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_inch?-instance-method">
+      <div class="signature">
+        
+        def <strong>square_inch?</strong>
+
+        <a class="method-permalink" href="#square_inch%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareInch">SquareInch</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L217" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_inches?-instance-method">
+      <div class="signature">
+        
+        def <strong>square_inches?</strong>
+
+        <a class="method-permalink" href="#square_inches%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareInches">SquareInches</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L218" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_kilometer?-instance-method">
+      <div class="signature">
+        
+        def <strong>square_kilometer?</strong>
+
+        <a class="method-permalink" href="#square_kilometer%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareKilometer">SquareKilometer</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L184" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_kilometers?-instance-method">
+      <div class="signature">
+        
+        def <strong>square_kilometers?</strong>
+
+        <a class="method-permalink" href="#square_kilometers%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareKilometers">SquareKilometers</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L185" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_meter?-instance-method">
+      <div class="signature">
+        
+        def <strong>square_meter?</strong>
+
+        <a class="method-permalink" href="#square_meter%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareMeter">SquareMeter</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L179" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_meters?-instance-method">
+      <div class="signature">
+        
+        def <strong>square_meters?</strong>
+
+        <a class="method-permalink" href="#square_meters%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareMeters">SquareMeters</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L180" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_micrometer?-instance-method">
+      <div class="signature">
+        
+        def <strong>square_micrometer?</strong>
+
+        <a class="method-permalink" href="#square_micrometer%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareMicrometer">SquareMicrometer</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L199" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_micrometers?-instance-method">
+      <div class="signature">
+        
+        def <strong>square_micrometers?</strong>
+
+        <a class="method-permalink" href="#square_micrometers%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareMicrometers">SquareMicrometers</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L200" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_mile?-instance-method">
+      <div class="signature">
+        
+        def <strong>square_mile?</strong>
+
+        <a class="method-permalink" href="#square_mile%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareMile">SquareMile</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L222" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_miles?-instance-method">
+      <div class="signature">
+        
+        def <strong>square_miles?</strong>
+
+        <a class="method-permalink" href="#square_miles%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareMiles">SquareMiles</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L223" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_millimeter?-instance-method">
+      <div class="signature">
+        
+        def <strong>square_millimeter?</strong>
+
+        <a class="method-permalink" href="#square_millimeter%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareMillimeter">SquareMillimeter</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L194" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_millimeters?-instance-method">
+      <div class="signature">
+        
+        def <strong>square_millimeters?</strong>
+
+        <a class="method-permalink" href="#square_millimeters%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareMillimeters">SquareMillimeters</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L195" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_nanometer?-instance-method">
+      <div class="signature">
+        
+        def <strong>square_nanometer?</strong>
+
+        <a class="method-permalink" href="#square_nanometer%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareNanometer">SquareNanometer</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L202" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_nanometers?-instance-method">
+      <div class="signature">
+        
+        def <strong>square_nanometers?</strong>
+
+        <a class="method-permalink" href="#square_nanometers%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareNanometers">SquareNanometers</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L203" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_yard?-instance-method">
+      <div class="signature">
+        
+        def <strong>square_yard?</strong>
+
+        <a class="method-permalink" href="#square_yard%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareYard">SquareYard</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L212" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square_yards?-instance-method">
+      <div class="signature">
+        
+        def <strong>square_yards?</strong>
+
+        <a class="method-permalink" href="#square_yards%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#SquareYards">SquareYards</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L213" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="yd2?-instance-method">
+      <div class="signature">
+        
+        def <strong>yd2?</strong>
+
+        <a class="method-permalink" href="#yd2%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Measure/Area/Unit.html#Yd2">Yd2</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jgaskins/measure/blob/v/src/area.cr#L215" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+</div>
+
+</body>
+</html>

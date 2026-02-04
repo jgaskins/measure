@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Crystal Docs 1.10.1">
-<meta name="crystal_docs.project_version" content="main">
+<meta name="generator" content="Crystal Docs 1.18.2">
+<meta name="crystal_docs.project_version" content="">
 <meta name="crystal_docs.project_name" content="measure">
 
 
@@ -14,7 +14,7 @@
 <script type="text/javascript" src="js/doc.js"></script>
 
   <meta name="repository-name" content="measure">
-  <title>measure main</title>
+  <title>measure </title>
   <script type="text/javascript">
   CrystalDocs.base_path = "";
   </script>
@@ -45,7 +45,7 @@
       </h1>
 
       <span class="project-version">
-        main
+        
       </span>
     </div>
   </div>
@@ -62,6 +62,36 @@
       
         <ul>
   
+  <li class="parent " data-id="measure/Measure/Area" data-name="measure::area">
+      <a href="Measure/Area.html">Area</a>
+      
+        <ul>
+  
+  <li class=" " data-id="measure/Measure/Area/Unit" data-name="measure::area::unit">
+      <a href="Measure/Area/Unit.html">Unit</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="measure/Measure/Data" data-name="measure::data">
+      <a href="Measure/Data.html">Data</a>
+      
+        <ul>
+  
+  <li class=" " data-id="measure/Measure/Data/Unit" data-name="measure::data::unit">
+      <a href="Measure/Data/Unit.html">Unit</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
   <li class="parent " data-id="measure/Measure/Length" data-name="measure::length">
       <a href="Measure/Length.html">Length</a>
       
@@ -69,6 +99,21 @@
   
   <li class=" " data-id="measure/Measure/Length/Unit" data-name="measure::length::unit">
       <a href="Measure/Length/Unit.html">Unit</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="measure/Measure/Volume" data-name="measure::volume">
+      <a href="Measure/Volume.html">Volume</a>
+      
+        <ul>
+  
+  <li class=" " data-id="measure/Measure/Volume/Unit" data-name="measure::volume::unit">
+      <a href="Measure/Volume/Unit.html">Unit</a>
       
     </li>
   
@@ -161,6 +206,15 @@
 <span class="c"># =&gt; Measure::Length(@magnitude=30.47999902464003, @unit=Measure::Length::Unit::Centimeter)</span>
 <span class="n">6</span>.feet.to(<span class="n">:inches</span>)
 <span class="c"># =&gt; Measure::Length(@magnitude=72.0, @unit=Measure::Length::Unit::Inch)</span></code></pre>
+<h2><a id="area-and-volume" class="anchor" href="#area-and-volume">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Area and Volume</h2>
+<p>You can even multiply two instances of a <code><a href="Measure/Length.html">Measure::Length</a></code> to get a <code><a href="Measure/Area.html">Measure::Area</a></code>:</p>
+<pre><code class="language-crystal"><span class="n">3</span>.feet <span class="o">*</span> <span class="n">3</span>.feet <span class="c"># =&gt; Measure::Area(@magnitude=9.0, @unit=Measure::Area::Unit::SquareFoot)</span></code></pre>
+<p>And then multiply that to get a <code><a href="Measure/Volume.html">Measure::Volume</a></code>:</p>
+<pre><code class="language-crystal"><span class="n">3</span>.feet <span class="o">*</span> <span class="n">3</span>.feet <span class="o">*</span> <span class="n">3</span>.feet <span class="c"># =&gt; Measure::Volume(@magnitude=27.0, @unit=Measure::Volume::Unit::CubicFoot)</span></code></pre>
 <p>The full list of length units are available <a href="https://jgaskins.dev/measure/Measure/Length/Unit.html">here</a>.</p>
 <h3><a id="weight" class="anchor" href="#weight">
   <svg class="octicon-link" aria-hidden="true">
@@ -180,19 +234,22 @@
 <span class="c"># =&gt; Measure::Weight(@magnitude=50.0, @unit=Measure::Weight::Unit::Kilogram)</span>
 <span class="n">50</span>.grams.to(<span class="n">:ounces</span>)
 <span class="c"># =&gt; Measure::Weight(@magnitude=1.763696, @unit=Measure::Weight::Unit::Ounce)</span></code></pre>
-<h2><a id="comparisons-with-similar-projects" class="anchor" href="#comparisons-with-similar-projects">
+<h2><a id="precision" class="anchor" href="#precision">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
-</a>Comparisons with similar projects</h2>
-<p><code><a href="Measure.html">Measure</a></code> isn't the only Crystal shard that offers support for various units of
-measure. Below is a comparison with the ones I've tried.</p>
-<h3><a id="spider-gazellecrunits-units" class="anchor" href="#spider-gazellecrunits-units">
+</a>Precision</h2>
+<p>It's important to note that this shard stores the magnitude of the measurement as a <code>Float64</code>. This means it is limited to the precision 64-bit IEEE754 floating-point numbers.</p>
+<h3><a id="why-float64-when-big-decimal-is-right-there" class="anchor" href="#why-float64-when-big-decimal-is-right-there">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
-</a><code>spider-gazelle/crunits</code> — <code>Units</code></h3>
-<p>This shard is a Crystal port of the <a href="https://github.com/joshwlewis/unitwise">Ruby <code>unitwise</code> gem</a>.
+</a>Why <a href="https://crystal-lang.org/api/1.16.3/Float64.html"><code>Float64</code></a> when <a href="https://crystal-lang.org/api/1.16.3/BigDecimal.html"><code>BigDecimal</code></a> is right there?</h3>
+<p>Measurements of nearly everything are less precise than we think they are. If you pull out a tape measure and measure something as being 10 feet long, that measurement is only as precise as your eyes, the placement of both ends of the tape, and the markings on the tape itself. It might be within 1/16th of an inch, but it's not going to be <em>exactly</em> 10 feet. Even objects measured and cut by machine are subject to the precision of that machine — they may be within 1/64th of an inch, but they won't be <em>exactly</em> 10 feet, either.</p>
+<p>The point is that measurements just need to be close enough. <code>Float64</code> gets us close enough.</p>
+<p>The <a href="https://github.com/spider-gazelle/crunits"><code>spider-gazelle/crunits</code></a> shard offers arbitrary precision for measurements. It's also a lot slower and doesn't offer the same compile-time guarantees that this shard does. But if you feel you need arbitrary precision, use <code>crunits</code>.</p>
+<details><summary>Comparison to <code>crunits</code></summary>
+<p><code>crunits</code> is a Crystal port of the <a href="https://github.com/joshwlewis/unitwise">Ruby <code>unitwise</code> gem</a>.
 The Ruby gem is <em>amazing</em>, to be clear, and the Crystal shard appears to support
 similar levels of flexibility and extensibility.</p>
 <p>The reason I chose not to use it and instead write <code><a href="Measure.html">Measure</a></code> is that <code>Units</code>
@@ -213,6 +270,7 @@ crunits  <span class="n">13.28</span>k ( <span class="n">75.30</span>µs) (± <s
 measure   <span class="n">1.05</span><span class="t">G</span> (  <span class="n">0.96</span>ns) (± <span class="n">1.42</span><span class="o">%</span>)   <span class="n">0.0</span><span class="t">B</span><span class="o">/</span>op           fastest</code></pre>
 <p>For some of these, the monotonic clock is overcounting how long it takes to run the block for <code><a href="Measure.html">Measure</a></code> because it doesn't have sufficient precision, so the real difference may be significantly larger. But even so, a factor of 360-245k is pretty huge. Relying on primitive 64-bit floats and enums makes <code><a href="Measure.html">Measure</a></code> significantly faster.</p>
 <p>Chances are, instantiating <code>Units::Measurement</code> instances won't be a bottleneck in your application, but it and the heap-memory usage (<code>Units::Measurement</code> allocates almost 1MB of heap per instance) are factors to consider.</p>
+</details>
 <h2><a id="contributing" class="anchor" href="#contributing">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>

@@ -114,7 +114,7 @@ describe Measure::Weight do
     describe "#==" do
       {
         [1.ton, 2_000.pounds, 32_000.ounces],
-        [0.0005.tons, 1.pound, 16.ounces],
+        [0.5.tons, 1000.pounds, 16_000.ounces],
         [1.kilogram, 1_000.grams, 1_000_000.milligrams],
       }.each &.each_permutation 2 do |(a, b)|
         it "treats #{a} as equal to #{b}" do
